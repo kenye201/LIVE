@@ -9,7 +9,7 @@ SUBDOMAIN_PREFIX = os.getenv("SUBDOMAIN_PREFIX", "hao")
 TTL = int(os.getenv("TTL", "120"))
 PROXIED = os.getenv("PROXIED", "false").lower() == "true"
 RECORDS_PER_DOMAIN = int(os.getenv("RECORDS_PER_DOMAIN", "4"))
-IP_URL = os.getenv("IP_URL")  # 必须设置，例如 https://565a.bou.qzz.io/ip.txt
+IP_URL = os.getenv("https://565a.bou.qzz.io/ip.txt")  # 必须设置，例如 https://565a.bou.qzz.io/ip.txt
 
 # Cloudflare 账号配置（JSON 格式，从 Secrets 读取）
 CF_ACCOUNTS_JSON = os.getenv("CF_ACCOUNTS")
