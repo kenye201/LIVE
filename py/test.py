@@ -1,7 +1,9 @@
+import requests
+import random
+import time      # ← 这一行一定要加！
 import os
 import sys
 import json
-
 # ============ 必填配置检查 ============
 required_vars = ["IP_URL", "CF_ACCOUNTS"]
 missing = [var for var in required_vars if not os.getenv(var)]
