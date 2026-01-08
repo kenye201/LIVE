@@ -1,101 +1,74 @@
-import requests
-import re
-import os
+import asyncio
 import base64
-from urllib.parse import quote, urljoin
+import os
+import sys
+from playwright.async_api import async_playwright
 
-BASE_URL = "https://iptv.cqshushu.com/"
-LIST_URL = "https://iptv.cqshushu.com/?t=hotel"
+BASE_URL = "https://iptv.cqshushu.com/?t=hotel"
+OUT_FILE = "test/hotel_m3u_links.txt"
+PROXY = os.environ.get("PROXY")  # 从环境变量读取代理
 
-SESSION_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-    "Referer": LIST_URL,
-    "Accept": "application/json, text/javascript, */*; q=0.01",
-    "X-Requested-With": "XMLHttpRequest",
-}
+async def main():
+    os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
 
-OUTPUT_DIR = "test"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "hotel_m3u_links.txt")
+    async with async_playwright() as p:
+        launch_opts = {"headless": True}
+        if PROXY:
+            launch_opts["proxy"] = {"server": PROXY}
 
+        browser = await p.chromium.launch(**launch_opts)
+        context = await browser.new_context()
+        page = await context.new_page()
 
-def get_ips():
-    r = requests.get(LIST_URL, headers={"User-Agent": SESSION_HEADERS["User-Agent"]}, timeout=20)
-    r.raise_for_status()
+        print("访问首页...", flush=True)
+        await page.goto(BASE_URL, timeout=60000)
 
-    encoded = re.findall(
-        r"gotoIP\('([^']+)',\s*'hotel'\)",
-        r.text
-    )
+        ip_elements = await page.query_selector_all("a.ip-link")
+        ips = []
+        for el in ip_elements:
+            b64 = await el.get_attribute("onclick")
+            if b64:
+                import re
+                m = re.search(r"gotoIP\('([^']+)'", b64)
+                if m:
+                    try:
+                        ip = base64.b64decode(m.group(1)).decode()
+                        ips.append(ip)
+                    except:
+                        pass
 
-    ips = []
-    for e in encoded:
-        try:
-            ips.append(base64.b64decode(e).decode())
-        except Exception:
-            pass
+        print(f"发现 {len(ips)} 个 IP: {ips}", flush=True)
+        all_links = []
 
-    print(f"发现 {len(ips)} 个 IP")
-    return ips
+        for ip in ips:
+            print(f"\n处理 IP: {ip}", flush=True)
+            try:
+                await page.evaluate(f"""
+                    () => {{
+                        const ipEl = Array.from(document.querySelectorAll('a.ip-link'))
+                                      .find(el => el.textContent.includes('{ip}'));
+                        if(ipEl) ipEl.click();
+                    }}
+                """)
+                await page.wait_for_selector("div.download-section a.download-btn.m3u", timeout=15000)
+                m3u_link_el = await page.query_selector("div.download-section a.download-btn.m3u")
+                if m3u_link_el:
+                    href = await m3u_link_el.get_attribute("href")
+                    full_link = f"http://iptv.cqshushu.com/{href.lstrip('?')}"
+                    all_links.append(full_link)
+                    print(f"  └─ M3U 链接: {full_link}", flush=True)
+            except Exception as e:
+                print(f"  └─ [异常] {e}", flush=True)
 
+        await browser.close()
 
-def get_ip_ports(ip):
-    """
-    关键：模拟浏览器 XHR 请求
-    """
-    url = f"{BASE_URL}?p={ip}&t=hotel&_js=1"
-    r = requests.get(url, headers=SESSION_HEADERS, timeout=20)
+    with open(OUT_FILE, "w", encoding="utf-8") as f:
+        for link in sorted(set(all_links)):
+            f.write(link + "\n")
 
-    if r.status_code != 200:
-        print(f"[403] 跳过 {ip}")
-        return []
-
-    # JSON / JS 中包含 IP:端口
-    ports = re.findall(
-        rf"{re.escape(ip)}:\d+",
-        r.text
-    )
-
-    return list(set(ports))
-
-
-def get_m3u_link(ip_port):
-    s = quote(ip_port)
-    url = f"{BASE_URL}?s={s}&t=hotel"
-
-    r = requests.get(url, headers={"User-Agent": SESSION_HEADERS["User-Agent"]}, timeout=20)
-    if r.status_code != 200:
-        return None
-
-    m = re.search(r"href=['\"]([^'\"]+download=m3u)['\"]", r.text)
-    if not m:
-        return None
-
-    return urljoin(BASE_URL, m.group(1))
-
-
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-    results = []
-    ips = get_ips()
-
-    for ip in ips:
-        print(f"处理 IP {ip}")
-        for ip_port in get_ip_ports(ip):
-            print(f"  → {ip_port}")
-            m3u = get_m3u_link(ip_port)
-            if m3u:
-                results.append(m3u)
-
-    results = sorted(set(results))
-
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        for u in results:
-            f.write(u + "\n")
-
-    print(f"\n完成，共获取 {len(results)} 条 M3U")
-    print(f"保存至 {OUTPUT_FILE}")
+    print(f"\n完成，共获取 {len(all_links)} 条 M3U", flush=True)
+    print(f"保存至 {OUT_FILE}", flush=True)
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
