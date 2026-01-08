@@ -3,7 +3,10 @@ name: Hotel IPTV Fetch
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *"   # 每天北京时间 11:00（UTC 03:00）
+    - cron: "0 3 * * *"
+
+permissions:
+  contents: write
 
 jobs:
   fetch:
@@ -28,8 +31,8 @@ jobs:
 
       - name: Commit and push results
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add test/
           git commit -m "Auto update hotel IPTV m3u links" || echo "No changes"
           git push
