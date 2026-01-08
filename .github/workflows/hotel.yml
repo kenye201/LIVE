@@ -1,9 +1,9 @@
 name: Hotel IPTV M3U Scraper
 
 on:
-  workflow_dispatch:  # 手动触发
+  workflow_dispatch:       # 手动触发
   schedule:
-    - cron: '0 3 * * *'  # 每天 UTC 03:00 运行一次
+    - cron: '0 3 * * *'   # 每天 UTC 03:00 运行一次
 
 jobs:
   scrape-hotel:
@@ -17,15 +17,13 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install dependencies
+      - name: Install Playwright
         run: |
           python -m pip install --upgrade pip
           pip install playwright
           playwright install chromium
 
       - name: Run scraper
-        env:
-          PROXY: "http://127.0.0.1:7890"  # 如果不需要代理可留空
         run: |
           python py/hotel.py
 
