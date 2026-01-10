@@ -19,29 +19,44 @@ html, body {
     object-fit:contain;
     background:#000;
 }
-#volume-container {
+
+/* 控制条容器 */
+#controls {
     position:absolute;
-    right:10px;
     bottom:20px;
+    right:20px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:10px;
+    z-index:10;
+}
+
+/* 音量条 */
+#volume-container {
     width:30px;
-    height:100px;
+    height:120px;
     display:flex;
     align-items:flex-end;
     cursor:pointer;
-}
-#volume-bar {
-    width:100%;
-    height:0%;
-    background:#0e90d2;
-    transition: height 0.1s;
-    border-radius:4px 4px 0 0;
+    position:relative;
 }
 #volume-bg {
+    position:absolute;
     width:100%;
     height:100%;
     background:rgba(255,255,255,0.2);
     border-radius:4px;
 }
+#volume-bar {
+    width:100%;
+    height:0%;
+    background:#0e90d2;
+    border-radius:4px 4px 0 0;
+    transition: height 0.1s;
+}
+
+/* 提示文字 */
 .tip{
     position:absolute;
     inset:0;
@@ -52,15 +67,31 @@ html, body {
     font-size:20px;
     text-align:center;
 }
+
+/* 控制条自适应缩放 */
+@media (max-height:500px){
+    #volume-container {
+        height:80px;
+    }
+}
+@media (max-height:350px){
+    #volume-container {
+        height:60px;
+    }
+}
 </style>
 </head>
 <body>
 
 <video id="video" autoplay muted playsinline webkit-playsinline></video>
-<div id="volume-container">
-    <div id="volume-bg"></div>
-    <div id="volume-bar"></div>
+
+<div id="controls">
+    <div id="volume-container">
+        <div id="volume-bg"></div>
+        <div id="volume-bar"></div>
+    </div>
 </div>
+
 <div id="tip" class="tip" style="display:none"></div>
 
 <script>
@@ -76,7 +107,7 @@ if(!url){
 } else {
     tip.style.display = 'none';
 
-    // 初始化 Hls.js
+    // Hls.js 初始化
     if(Hls.isSupported()){
         const hls = new Hls({
             maxBufferLength:60,
@@ -89,17 +120,17 @@ if(!url){
         video.src = url;
     }
 
-    video.volume = 0.1; // 默认小音量
-    video.muted = true;  // 静音自动播放
+    video.volume = 0.1; 
+    video.muted = true;  
 
-    // 音量竖条控制
+    // 音量条控制
     function setVolumeByMouse(e){
         const rect = volumeContainer.getBoundingClientRect();
         let vol = (rect.bottom - e.clientY)/rect.height;
         vol = Math.max(0, Math.min(1, vol));
         volumeBar.style.height = (vol*100) + '%';
         video.volume = vol;
-        video.muted = false; // 用户操作时解除静音
+        video.muted = false;
     }
 
     volumeContainer.addEventListener('mousedown', e => {
