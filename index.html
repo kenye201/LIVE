@@ -2,9 +2,12 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>M3U8 Player</title>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.15.2/skins/default/aliplayer-min.css" />
+<script src="https://g.alicdn.com/de/prismplayer/2.15.2/aliplayer-min.js"></script>
+
 <style>
 html,body{
     margin:0;
@@ -12,11 +15,9 @@ html,body{
     height:100%;
     background:#000;
 }
-video{
+#player{
     width:100%;
     height:100%;
-    object-fit:contain;
-    background:#000;
 }
 .tip{
     color:#fff;
@@ -32,18 +33,11 @@ video{
 </head>
 <body>
 
-<video id="video"
-       controls
-       autoplay
-       muted
-       playsinline
-       webkit-playsinline></video>
-
+<div id="player"></div>
 <div id="tip" class="tip" style="display:none"></div>
 
 <script>
 const url = new URLSearchParams(location.search).get('url');
-const video = document.getElementById('video');
 const tip = document.getElementById('tip');
 
 if (!url) {
@@ -55,32 +49,33 @@ if (!url) {
         https://你的域名/?url=https://example.com/xxx.m3u8
     `;
 } else {
+
+    const player = new Aliplayer({
+        id: 'player',
+        source: url,
+        autoplay: true,
+        muted: true,          // ⚠️ 必须
+        isLive: false,
+        preload: true,
+        controlBarVisibility: 'always',
+        useH5Prism: true,
+    }, function () {
+        console.log('AliPlayer Ready');
+    });
+
     let restored = false;
     const targetVolume = 0.1;
 
     function restoreVolume() {
         if (restored) return;
-        video.muted = false;
-        video.volume = targetVolume;
+        player.setVolume(targetVolume);
+        player.setMute(false);
         restored = true;
     }
 
-    // 任意用户行为即恢复音量
     ['click','touchstart','keydown','mousemove'].forEach(ev=>{
         document.addEventListener(ev, restoreVolume, { once:true });
     });
-
-    if (Hls.isSupported()) {
-        const hls = new Hls({
-            maxBufferLength: 60,
-            maxMaxBufferLength: 120,
-            startLevel: -1
-        });
-        hls.loadSource(url);
-        hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = url;
-    }
 }
 </script>
 
