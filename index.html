@@ -62,8 +62,8 @@ if (!url) {
     overlay.onclick = () => {
         overlay.style.display = 'none';
 
-        video.volume = 0.1;   // ✅ 真正生效
-        video.muted = false;
+        video.volume = 0.01;   // ✅ 真正生效
+        video.muted = true;
 
         if (Hls.isSupported()) {
             const hls = new Hls({
