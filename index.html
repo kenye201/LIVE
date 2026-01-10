@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>M3U8 Player</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
@@ -20,26 +20,47 @@ html, body {
     background:#000;
 }
 
-/* 控制条容器 */
+/* 控件容器放在视频上 */
 #controls {
     position:absolute;
     bottom:20px;
+    left:20px;
     right:20px;
     display:flex;
-    flex-direction: column;
+    justify-content:space-between;
     align-items:center;
-    gap:10px;
-    z-index:10;
+    pointer-events:none; /* 除了控件本身，其他区域点击不生效 */
 }
 
-/* 音量条 */
+/* 进度条 */
+#progress-container {
+    flex:1;
+    height:5px;
+    background:rgba(255,255,255,0.2);
+    border-radius:2px;
+    margin-right:10px;
+    cursor:pointer;
+    pointer-events:auto;
+}
+#progress-bar {
+    width:0%;
+    height:100%;
+    background:#0e90d2;
+    border-radius:2px;
+    transition:width 0.1s;
+}
+
+/* 音量竖条 */
 #volume-container {
     width:30px;
-    height:120px;
+    height:100px;
     display:flex;
     align-items:flex-end;
     cursor:pointer;
+    pointer-events:auto;
     position:relative;
+    background:rgba(0,0,0,0.2);
+    border-radius:4px;
 }
 #volume-bg {
     position:absolute;
@@ -56,7 +77,7 @@ html, body {
     transition: height 0.1s;
 }
 
-/* 提示文字 */
+/* 提示 */
 .tip{
     position:absolute;
     inset:0;
@@ -67,18 +88,6 @@ html, body {
     font-size:20px;
     text-align:center;
 }
-
-/* 控制条自适应缩放 */
-@media (max-height:500px){
-    #volume-container {
-        height:80px;
-    }
-}
-@media (max-height:350px){
-    #volume-container {
-        height:60px;
-    }
-}
 </style>
 </head>
 <body>
@@ -86,6 +95,9 @@ html, body {
 <video id="video" autoplay muted playsinline webkit-playsinline></video>
 
 <div id="controls">
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
     <div id="volume-container">
         <div id="volume-bg"></div>
         <div id="volume-bar"></div>
@@ -100,6 +112,8 @@ const video = document.getElementById('video');
 const tip = document.getElementById('tip');
 const volumeContainer = document.getElementById('volume-container');
 const volumeBar = document.getElementById('volume-bar');
+const progressContainer = document.getElementById('progress-container');
+const progressBar = document.getElementById('progress-bar');
 
 if(!url){
     tip.style.display = 'flex';
@@ -109,11 +123,7 @@ if(!url){
 
     // Hls.js 初始化
     if(Hls.isSupported()){
-        const hls = new Hls({
-            maxBufferLength:60,
-            maxMaxBufferLength:120,
-            startLevel:-1
-        });
+        const hls = new Hls();
         hls.loadSource(url);
         hls.attachMedia(video);
     } else if(video.canPlayType('application/vnd.apple.mpegurl')){
@@ -123,25 +133,39 @@ if(!url){
     video.volume = 0.1; 
     video.muted = true;  
 
-    // 音量条控制
+    // 音量条操作
     function setVolumeByMouse(e){
         const rect = volumeContainer.getBoundingClientRect();
         let vol = (rect.bottom - e.clientY)/rect.height;
         vol = Math.max(0, Math.min(1, vol));
-        volumeBar.style.height = (vol*100) + '%';
+        volumeBar.style.height = (vol*100)+'%';
         video.volume = vol;
-        video.muted = false;
+        video.muted = false; // 用户操作解除静音
     }
-
     volumeContainer.addEventListener('mousedown', e => {
         setVolumeByMouse(e);
         const moveHandler = ev => setVolumeByMouse(ev);
         document.addEventListener('mousemove', moveHandler);
         document.addEventListener('mouseup', ()=> document.removeEventListener('mousemove', moveHandler), {once:true});
     });
-
-    // 初始化音量条高度
     volumeBar.style.height = (video.volume*100)+'%';
+
+    // 进度条
+    function updateProgress(){
+        if(video.duration){
+            const percent = (video.currentTime/video.duration)*100;
+            progressBar.style.width = percent+'%';
+        }
+        requestAnimationFrame(updateProgress);
+    }
+    updateProgress();
+
+    // 点击进度条跳转
+    progressContainer.addEventListener('click', e=>{
+        const rect = progressContainer.getBoundingClientRect();
+        const percent = (e.clientX - rect.left)/rect.width;
+        video.currentTime = video.duration * percent;
+    });
 }
 </script>
 
