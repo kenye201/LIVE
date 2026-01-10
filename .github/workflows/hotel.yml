@@ -32,20 +32,18 @@ jobs:
         run: python py/hotel.py
 
       # 5️⃣ Commit & push using PAT
+
       - name: Commit and push results
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # 配置 git 用户信息
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-
-          # 添加文件
-          git add test/*.m3u || true
-
-          # 提交
-          git commit -m "Auto update hotel IPTV m3u" || echo "No changes"
-
-          # 用 PAT 推送
-          git remote set-url origin https://x-access-token:$GH_TOKEN@github.com/kenye201/python.git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 只添加合并后的那个文件
+          git add test/hotel_all.m3u || true
+          
+          git commit -m "Auto update merged IPTV list" || echo "No changes"
+          
+          # 推送
           git push origin HEAD:main
