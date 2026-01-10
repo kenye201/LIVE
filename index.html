@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M3U8 在线播放器</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            overflow: hidden;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        .tip {
-            color: #fff;
-            font-size: 24px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0,0,0,0.6);
-            padding: 20px 40px;
-            border-radius: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M3U8 在线播放器</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:#000;
+}
+video{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+.tip{
+    color:#fff;
+    font-size:22px;
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,.6);
+    padding:20px 30px;
+    border-radius:10px;
+}
+</style>
 </head>
 <body>
-    <video id="video" controls autoplay muted playsinline></video>
 
-    <script>
-        // 获取 URL 参数 ?url=
-        const urlParam = new URLSearchParams(location.search).get('url');
-        const video = document.getElementById('video');
+<video id="video" controls autoplay muted playsinline></video>
 
-        // 设置默认音量为 1，并强制设置
-        video.volume = 1;
+<script>
+const url = new URLSearchParams(location.search).get('url');
+const video = document.getElementById('video');
 
-        // 禁止解除静音时音量恢复为 100
-        video.onvolumechange = function() {
-            if (!video.muted) {
-                video.volume = 1;
-            }
-        };
+// 是否已经处理过“首次解除静音”
+let unmuteHandled = false;
 
-        // 如果没有提供 URL 参数，显示提示
-        if (!urlParam) {
-            document.body.innerHTML = '<div class="tip">使用方法：<br>在域名后添加 ?url=你的m3u8地址<br><br>例如：<br>https://yourdomain.com/?url=https://example.com/stream.m3u8</div>';
-        } else {
-            // 支持 HLS.js 的浏览器
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(urlParam);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    video.play();
-                });
-            }
-            // Safari 等原生支持 HLS 的浏览器
-            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = urlParam;
-                video.addEventListener('loadedmetadata', () => {
-                    video.play();
-                });
-            }
-            // 不支持的情况
-            else {
-                document.body.innerHTML = '<div class="tip">您的浏览器不支持 HLS 播放</div>';
-            }
+// 监听音量变化
+video.addEventListener('volumechange', () => {
+    // 只在「第一次取消静音」时处理
+    if (!video.muted && !unmuteHandled) {
+        unmuteHandled = true;
+
+        // 如果浏览器默认给了 100%，我们降到安全音量
+        if (video.volume > 0.2) {
+            video.volume = 0.01; // 5%，你也可以改成 0.03 / 0.1
         }
+    }
+});
 
-        // 监听静音状态变化，解除静音时保持音量为1
-        video.addEventListener('volumechange', function() {
-            if (!video.muted) {
-                video.volume = 1;
-            }
+if (!url) {
+    document.body.innerHTML = `
+        <div class="tip">
+        使用方法：<br><br>
+        域名后添加 ?url=你的m3u8地址<br><br>
+        示例：<br>
+        https://yourdomain.com/?url=https://example.com/index.m3u8
+        </div>
+    `;
+} else {
+    if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.play();
         });
-    </script>
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.play();
+    } else {
+        document.body.innerHTML = '<div class="tip">浏览器不支持 HLS 播放</div>';
+    }
+}
+</script>
+
 </body>
 </html>
