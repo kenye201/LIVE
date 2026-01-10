@@ -2,80 +2,115 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>M3U8 Player</title>
-
-<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.15.2/skins/default/aliplayer-min.css" />
-<script src="https://g.alicdn.com/de/prismplayer/2.15.2/aliplayer-min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
-html,body{
+html, body {
     margin:0;
     width:100%;
     height:100%;
     background:#000;
+    overflow:hidden;
 }
-#player{
+#video {
     width:100%;
     height:100%;
+    object-fit:contain;
+    background:#000;
+}
+#volume-container {
+    position:absolute;
+    right:10px;
+    bottom:20px;
+    width:30px;
+    height:100px;
+    display:flex;
+    align-items:flex-end;
+    cursor:pointer;
+}
+#volume-bar {
+    width:100%;
+    height:0%;
+    background:#0e90d2;
+    transition: height 0.1s;
+    border-radius:4px 4px 0 0;
+}
+#volume-bg {
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.2);
+    border-radius:4px;
 }
 .tip{
-    color:#fff;
-    font-size:22px;
-    text-align:center;
     position:absolute;
     inset:0;
     display:flex;
     align-items:center;
     justify-content:center;
+    color:#fff;
+    font-size:20px;
+    text-align:center;
 }
 </style>
 </head>
 <body>
 
-<div id="player"></div>
+<video id="video" autoplay muted playsinline webkit-playsinline></video>
+<div id="volume-container">
+    <div id="volume-bg"></div>
+    <div id="volume-bar"></div>
+</div>
 <div id="tip" class="tip" style="display:none"></div>
 
 <script>
 const url = new URLSearchParams(location.search).get('url');
+const video = document.getElementById('video');
 const tip = document.getElementById('tip');
+const volumeContainer = document.getElementById('volume-container');
+const volumeBar = document.getElementById('volume-bar');
 
-if (!url) {
+if(!url){
     tip.style.display = 'flex';
-    tip.innerHTML = `
-        使用方法：<br><br>
-        域名后加 ?url=你的m3u8<br><br>
-        示例：<br>
-        https://你的域名/?url=https://example.com/xxx.m3u8
-    `;
+    tip.innerHTML = `使用方法：<br>域名后加 ?url=你的m3u8<br><br>例如：<br>https://你的域名/?url=https://example.com/xxx.m3u8`;
 } else {
+    tip.style.display = 'none';
 
-    const player = new Aliplayer({
-        id: 'player',
-        source: url,
-        autoplay: true,
-        muted: true,          // ⚠️ 必须
-        isLive: false,
-        preload: true,
-        controlBarVisibility: 'always',
-        useH5Prism: true,
-    }, function () {
-        console.log('AliPlayer Ready');
-    });
-
-    let restored = false;
-    const targetVolume = 0.01;
-
-    function restoreVolume() {
-        if (restored) return;
-        player.setVolume(targetVolume);
-        player.setMute(false);
-        restored = true;
+    // 初始化 Hls.js
+    if(Hls.isSupported()){
+        const hls = new Hls({
+            maxBufferLength:60,
+            maxMaxBufferLength:120,
+            startLevel:-1
+        });
+        hls.loadSource(url);
+        hls.attachMedia(video);
+    } else if(video.canPlayType('application/vnd.apple.mpegurl')){
+        video.src = url;
     }
 
-    ['click','touchstart','keydown','mousemove'].forEach(ev=>{
-        document.addEventListener(ev, restoreVolume, { once:true });
+    video.volume = 0.1; // 默认小音量
+    video.muted = true;  // 静音自动播放
+
+    // 音量竖条控制
+    function setVolumeByMouse(e){
+        const rect = volumeContainer.getBoundingClientRect();
+        let vol = (rect.bottom - e.clientY)/rect.height;
+        vol = Math.max(0, Math.min(1, vol));
+        volumeBar.style.height = (vol*100) + '%';
+        video.volume = vol;
+        video.muted = false; // 用户操作时解除静音
+    }
+
+    volumeContainer.addEventListener('mousedown', e => {
+        setVolumeByMouse(e);
+        const moveHandler = ev => setVolumeByMouse(ev);
+        document.addEventListener('mousemove', moveHandler);
+        document.addEventListener('mouseup', ()=> document.removeEventListener('mousemove', moveHandler), {once:true});
     });
+
+    // 初始化音量条高度
+    volumeBar.style.height = (video.volume*100)+'%';
 }
 </script>
 
