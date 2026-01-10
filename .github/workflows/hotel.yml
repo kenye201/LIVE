@@ -1,10 +1,10 @@
 name: Hotel IPTV Scan
 
-# 可以手动触发，也可以定时触发
+# 支持手动触发和定时触发
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"   # 每12小时一次
+    - cron: "0 */12 * * *"   # 每12小时执行一次
 
 jobs:
   scan:
@@ -31,9 +31,9 @@ jobs:
       # 4️⃣ 运行抓取脚本
       - name: Run hotel IPTV script
         run: |
-          python py/hotel.py
+          python py/hotel_github.py
 
-      # 5️⃣ 使用 PAT 推送更新
+      # 5️⃣ 使用 PAT 提交抓取结果
       - name: Commit and push results
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
