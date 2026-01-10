@@ -1,44 +1,39 @@
-name: Hotel IPTV Scan
+name: Hotel IPTV Update
 
-# 可以手动触发，也可以定时触发
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"   # 每12小时一次
+    - cron: "0 */12 * * *"
 
 jobs:
-  scan:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      # 1️⃣ 拉取仓库
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # 2️⃣ 安装 Python
+      - uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3️⃣ 安装依赖
       - name: Install dependencies
-        run: |
-          pip install requests
+        run: pip install requests
 
-      # 4️⃣ 运行抓取脚本
-      - name: Run hotel IPTV script
-        run: |
-          python py/hotel.py
+      # 第一步：抓取最新原始文件
+      - name: Run Scraper
+        run: python py/hotel.py
 
-      - name: Commit and push results
-        env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      # 第二步：整合与清洗
+      - name: Run Merger
+        run: python py/merge_m3u.py
+
+      - name: Commit and Push
         run: |
-         git config user.name "github-actions[bot]"
-         git config user.email "github-actions[bot]@users.noreply.github.com"
-         git add test/*.m3u || true
-         git commit -m "Auto update hotel IPTV m3u" || echo "No changes"
-         git push https://x-access-token:$GH_TOKEN@github.com/kenye201/python.git HEAD:main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add test/*.m3u
+          git commit -m "Auto update IPTV: $(date +'%Y-%m-%d %H:%M')" || echo "No changes"
+          git push origin HEAD:main
