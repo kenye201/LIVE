@@ -31,7 +31,7 @@ jobs:
       # 4️⃣ 运行抓取脚本
       - name: Run hotel IPTV script
         run: |
-          python py/hotel_github.py
+          python py/hotel.py
 
       # 5️⃣ 使用 PAT 提交抓取结果
       - name: Commit and push results
