@@ -10,18 +10,18 @@ import random
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "test"
-MAX_IP_COUNT = 6  # 稍微增加一点目标，因为我们现在有了更精准的手段
+MAX_IP_COUNT = 8  
 TIMEOUT = 12 
 
-# 常用酒店端口
+# 常用酒店端口（穷举兜底方案）
 PRIMARY_PORTS = [8082, 9901, 888, 9003, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808, 20443]
 
-# 随机 User-Agent 库，模拟不同用户环境
+# 随机 User-Agent 库
 UA_LIST = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
 ]
 
 def get_headers():
@@ -35,9 +35,10 @@ def get_headers():
 
 def get_fofa_ports(ip):
     """
-    改进版 FOFA 端口抓取：匹配更灵活的网页结构
+    改进版 FOFA 端口提取：
+    支持正则匹配 ip:port 格式以及 FOFA 网页特有的 port-item 结构
     """
-    sleep_time = random.uniform(5, 12)
+    sleep_time = random.uniform(8, 15)  # 稍微拉长等待，降低风控风险
     print(f"   ⏳ FOFA 冷却中 ({sleep_time:.1f}s)... ", end="", flush=True)
     time.sleep(sleep_time)
 
@@ -46,42 +47,44 @@ def get_fofa_ports(ip):
         search_url = f"https://fofa.info/result?qbase64={query}"
         
         res = requests.get(search_url, headers=get_headers(), timeout=15)
+        html = res.text
         
-        if "验证码" in res.text or "429 Too Many Requests" in res.text:
-            print("❌ 被拦截 (触发风控)")
+        if "验证码" in html or "429 Too Many Requests" in html:
+            print("❌ 触发防爬验证")
             return None 
+
+        # 策略 1：直接匹配 IP:PORT 结构
+        direct_matches = re.findall(rf'{ip}:(\d+)', html)
         
-        # --- 改进的正则匹配策略 ---
-        # 1. 匹配链接中的端口，如 <a href="http://1.1.1.1:8080"
-        ports_in_links = re.findall(rf'{ip}:(\d+)', res.text)
+        # 策略 2：提取所有 class="port-item" 里的数字 (FOFA 列表页常用结构)
+        item_matches = re.findall(r'port-item.*?(\d+)</a>', html, re.S)
         
-        # 2. 匹配 FOFA 特有的端口展示标签，如 <a class="port-item">8080</a>
-        # 我们寻找在 IP 出现后附近的端口项
-        ports_in_tags = re.findall(r'class="port-item">(\d+)</a>', res.text)
+        # 策略 3：备用正则，匹配所有类似端口的链接
+        link_matches = re.findall(r':(\d+)/', html)
+
+        # 合并结果
+        all_found = set([int(p) for p in (direct_matches + item_matches + link_matches)])
         
-        # 合并所有发现，排除掉常见的 22 (SSH), 23 (Telnet), 443 等非酒店端口
-        all_found = list(set([int(p) for p in (ports_in_links + ports_in_tags)]))
-        
-        # 过滤掉不需要的干扰端口
-        ignore_ports = {22, 23, 443, 80, 53, 3389}
-        final_ports = [p for p in all_found if p not in ignore_ports]
+        # 过滤掉非酒店常用端口 (如 22, 443, 80 等)
+        ignore_ports = {22, 23, 443, 80, 53, 3306, 3389}
+        final_ports = sorted([p for p in all_found if p not in ignore_ports])
         
         if final_ports:
-            print(f"✅ 探测到: {final_ports}")
+            print(f"✅ 提取到: {final_ports}")
         else:
-            print("❓ 未在页面发现开放端口")
-            
+            print("❓ 未发现特殊端口")
         return final_ports
+        
     except Exception as e:
-        print(f"❌ 出错: {e}")
-        return [][]
+        print(f"❌ 请求异常: {e}")
+        return []
 
 def scan_ip_port(ip, port):
-    """执行最终的 m3u 抓取"""
+    """访问目标地址尝试抓取 m3u 内容"""
     url = f"https://iptv.cqshushu.com/?s={ip}:{port}&t=hotel&channels=1&download=m3u"
     try:
-        # 为了不给目标服务器太大压力，这里也做微小延时
-        time.sleep(random.uniform(1.5, 3))
+        # 给目标服务器留出喘息时间
+        time.sleep(random.uniform(2, 4))
         res = requests.get(url, headers=get_headers(), timeout=TIMEOUT)
         if res.status_code == 200 and "#EXTINF" in res.text:
             return res.text
@@ -91,9 +94,9 @@ def scan_ip_port(ip, port):
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    print(f"🚀 启动慢速精准抓取任务... (目标: {MAX_IP_COUNT}个IP)")
+    print(f"🚀 启动慢速精准抓取任务 (目标: {MAX_IP_COUNT}个IP)")
     
-    # 1. 获取目标 IP 列表
+    # 1. 获取首页 IP 列表
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
         r.raise_for_status()
@@ -102,54 +105,51 @@ def main():
             if ip not in ips and not ip.startswith("127"):
                 ips.append(ip)
         ips = ips[:MAX_IP_COUNT]
-        print(f"📍 首页获取到 {len(ips)} 个待处理 IP")
+        print(f"📍 首页获取到 {len(ips)} 个待探测 IP")
     except Exception as e:
         print(f"❌ 首页访问失败: {e}")
         return
 
-    # 2. 逐个 IP 处理
+    # 2. 循环探测
     fofa_blocked = False
     for idx, ip in enumerate(ips, 1):
-        print(f"\n[{idx}/{len(ips)}] 📡 正在处理: {ip}")
+        print(f"\n[{idx}/{len(ips)}] 📡 正在探测: {ip}")
         
-        ports_to_test = []
+        test_ports = []
         
-        # 优先使用 FOFA，除非已被封锁
         if not fofa_blocked:
             f_ports = get_fofa_ports(ip)
             if f_ports is None:
                 fofa_blocked = True
-                print("   ⚠️ FOFA 访问受限，后续 IP 将全量使用穷举模式。")
-                ports_to_test = PRIMARY_PORTS
+                print("   ⚠️ FOFA 已拦截，切换为全量穷举模式。")
+                test_ports = PRIMARY_PORTS
             else:
-                # 组合端口：FOFA 发现的排在最前面
-                ports_to_test = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports]
+                # 优先级：FOFA 发现的端口 > PRIMARY_PORTS
+                test_ports = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports]
         else:
-            ports_to_test = PRIMARY_PORTS
+            test_ports = PRIMARY_PORTS
 
-        # 执行端口扫描
+        # 3. 执行测试
         found_success = False
-        for port in ports_to_test:
-            print(f"   ➜ 测试端口 {port} ... ", end="", flush=True)
+        for port in test_ports:
+            print(f"   ➜ 尝试端口 {port} ... ", end="", flush=True)
             content = scan_ip_port(ip, port)
             
             if content:
                 filename = f"raw_{ip}_{port}.m3u"
                 with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
                     f.write(content)
-                print("✅ 抓取成功！")
+                print("✅ 成功！")
                 found_success = True
-                break # 只要一个端口成功，就跳过该 IP 剩余端口
+                break # 该 IP 成功，直接跳到下一个 IP
             else:
                 print("✕")
         
         if not found_success:
-            print(f"   ⚠️ IP {ip} 扫描完毕，未获取到有效数据。")
+            print(f"   ⚠️ 该 IP 未发现有效源")
             
-        # 每个 IP 扫完后，额外休眠一段时间，防止 GitHub IP 被 cqshushu 封锁
-        extra_sleep = random.uniform(3, 8)
-        print(f"💤 IP 间隔休眠 {extra_sleep:.1f}s...")
-        time.sleep(extra_sleep)
+        # 降低整体频率，保护 GitHub Runner 的 IP
+        time.sleep(random.uniform(5, 10))
 
 if __name__ == "__main__":
     main()
