@@ -10,7 +10,7 @@ import random
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "test"
-MAX_IP_COUNT = 8  
+MAX_IP_COUNT = 6  
 TIMEOUT = 12 
 
 # 常用酒店端口（穷举兜底方案）
