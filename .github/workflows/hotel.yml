@@ -26,8 +26,10 @@ jobs:
       - name: Run Scraper
         run: python py/hotel.py
 
-      # 第二步：整合与清洗
-      - name: Run Merger
+      - name: Cleanup expired M3U files
+        run: python py/cleanup_m3u.py
+
+      - name: Run python py/merge_m3u.py
         run: python py/merge_m3u.py
 
       - name: Commit and Push
