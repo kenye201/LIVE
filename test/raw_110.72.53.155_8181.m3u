@@ -1,0 +1,191 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西卫视
+http://110.72.53.155:8181/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西综艺-B" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西综艺-B
+http://110.72.53.155:8181/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="cctv3标清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",cctv3标清
+http://110.72.53.155:8181/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西影视-J" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西影视-J
+http://110.72.53.155:8181/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5标清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV5标清
+http://110.72.53.155:8181/tsfile/live/1011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="cctv6标清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",cctv6标清
+http://110.72.53.155:8181/tsfile/live/1012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="珠江台BM" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",珠江台BM
+http://110.72.53.155:8181/tsfile/live/1013_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东影视-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广东影视-1
+http://110.72.53.155:8181/tsfile/live/1014_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6电影--J" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV6电影--J
+http://110.72.53.155:8181/tsfile/live/0006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="cctv9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",cctv9
+http://110.72.53.155:8181/tsfile/live/1016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="cctv8-测试10" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",cctv8-测试10
+http://110.72.53.155:8181/tsfile/live/1017_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="DTV1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",DTV1
+http://110.72.53.155:8181/tsfile/live/1018_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="DTV2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",DTV2
+http://110.72.53.155:8181/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="DTV3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",DTV3
+http://110.72.53.155:8181/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="DTV4牛哥" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",DTV4牛哥
+http://110.72.53.155:8181/tsfile/live/1021_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="TVS2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",TVS2
+http://110.72.53.155:8181/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",嘉佳卡通
+http://110.72.53.155:8181/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆1
+http://110.72.53.155:8181/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="XZTV1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",XZTV1
+http://110.72.53.155:8181/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="XZTV2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",XZTV2
+http://110.72.53.155:8181/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="OTV6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",OTV6
+http://110.72.53.155:8181/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="SBN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",SBN
+http://110.72.53.155:8181/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆2
+http://110.72.53.155:8181/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="深圳" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",深圳
+http://110.72.53.155:8181/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆3
+http://110.72.53.155:8181/tsfile/live/1031_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆5
+http://110.72.53.155:8181/tsfile/live/1010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆9
+http://110.72.53.155:8181/tsfile/live/1019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="1010" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",1010
+http://110.72.53.155:8181/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="1020" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",1020
+http://110.72.53.155:8181/tsfile/live/1035_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",新疆4
+http://110.72.53.155:8181/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="平南台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",平南台
+http://110.72.53.155:8181/tsfile/live/1037_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",浙江卫视
+http://110.72.53.155:8181/tsfile/live/0124_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",吉林卫视
+http://110.72.53.155:8181/tsfile/live/0116_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="旅游卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",旅游卫视
+http://110.72.53.155:8181/tsfile/live/0114_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="兵团卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",兵团卫视
+http://110.72.53.155:8181/tsfile/live/0115_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",山东卫视
+http://110.72.53.155:8181/tsfile/live/0131_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",山西卫视
+http://110.72.53.155:8181/tsfile/live/0118_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",陕西卫视
+http://110.72.53.155:8181/tsfile/live/0136_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="农林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",农林卫视
+http://110.72.53.155:8181/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV1-综合
+http://110.72.53.155:8181/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV2-财经
+http://110.72.53.155:8181/tsfile/live/0002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV3-综艺
+http://110.72.53.155:8181/tsfile/live/0003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV4-国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV4-国际
+http://110.72.53.155:8181/tsfile/live/0004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV5-体育
+http://110.72.53.155:8181/tsfile/live/0005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV6-电影
+http://110.72.53.155:8181/tsfile/live/0006_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV7-军农
+http://110.72.53.155:8181/tsfile/live/0007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV8-电视剧
+http://110.72.53.155:8181/tsfile/live/0008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV9-纪录
+http://110.72.53.155:8181/tsfile/live/0009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV10-科教
+http://110.72.53.155:8181/tsfile/live/0010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV11-戏曲
+http://110.72.53.155:8181/tsfile/live/0011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV12-社会与法
+http://110.72.53.155:8181/tsfile/live/0012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV13-新闻
+http://110.72.53.155:8181/tsfile/live/0013_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV14-少儿
+http://110.72.53.155:8181/tsfile/live/0014_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV15-音乐
+http://110.72.53.155:8181/tsfile/live/0015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV17
+http://110.72.53.155:8181/tsfile/live/0019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",CCTV5+体育赛事
+http://110.72.53.155:8181/tsfile/live/0016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="南宁影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",南宁影视
+http://110.72.53.155:8181/tsfile/live/0113_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广东卫视
+http://110.72.53.155:8181/tsfile/live/0125_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",湖南卫视
+http://110.72.53.155:8181/tsfile/live/0128_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",江西卫视
+http://110.72.53.155:8181/tsfile/live/0138_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",四川卫视
+http://110.72.53.155:8181/tsfile/live/0123_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",重庆卫视
+http://110.72.53.155:8181/tsfile/live/0142_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",辽宁卫视
+http://110.72.53.155:8181/tsfile/live/0121_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",上海卫视
+http://110.72.53.155:8181/tsfile/live/0107_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",北京卫视
+http://110.72.53.155:8181/tsfile/live/0122_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",浙江卫视
+http://110.72.53.155:8181/tsfile/live/0124_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",江苏卫视
+http://110.72.53.155:8181/tsfile/live/0127_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",深圳卫视
+http://110.72.53.155:8181/tsfile/live/0126_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",天津卫视
+http://110.72.53.155:8181/tsfile/live/0135_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",湖北卫视
+http://110.72.53.155:8181/tsfile/live/0132_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",山东卫视
+http://110.72.53.155:8181/tsfile/live/0131_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",黑龙江卫视
+http://110.72.53.155:8181/tsfile/live/0143_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",河北卫视
+http://110.72.53.155:8181/tsfile/live/0117_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",贵州卫视
+http://110.72.53.155:8181/tsfile/live/0120_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",东南卫视
+http://110.72.53.155:8181/tsfile/live/0137_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",金鹰纪实
+http://110.72.53.155:8181/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="教育一套" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",教育一套
+http://110.72.53.155:8181/tsfile/live/1032_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",金鹰卡通
+http://110.72.53.155:8181/tsfile/live/1063_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="卡酷动漫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",卡酷动漫
+http://110.72.53.155:8181/tsfile/live/1064_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中国气象" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",中国气象
+http://110.72.53.155:8181/tsfile/live/1067_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",安徽卫视
+http://110.72.53.155:8181/tsfile/live/0130_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",云南卫视
+http://110.72.53.155:8181/tsfile/live/0119_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",内蒙古卫视
+http://110.72.53.155:8181/tsfile/live/0109_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="GGTN" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",GGTN
+http://110.72.53.155:8181/tsfile/live/1069_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西综艺-D" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西综艺-D
+http://110.72.53.155:8181/tsfile/live/1070_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西都市" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西都市
+http://110.72.53.155:8181/tsfile/live/1071_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西新闻
+http://110.72.53.155:8181/tsfile/live/1072_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西影视
+http://110.72.53.155:8181/tsfile/live/1073_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西思乐购" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西思乐购
+http://110.72.53.155:8181/tsfile/live/1074_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广西移动" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",广西移动
+http://110.72.53.155:8181/tsfile/live/1075_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="珠江台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",珠江台
+http://110.72.53.155:8181/tsfile/live/1076_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="家庭影院" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",家庭影院
+http://110.72.53.155:8181/tsfile/live/1078_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",动作电影
+http://110.72.53.155:8181/tsfile/live/1079_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="高清电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",高清电影
+http://110.72.53.155:8181/tsfile/live/1080_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="精彩影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广西贵港市桂平市酒店 广西联通",精彩影视
+http://110.72.53.155:8181/tsfile/live/1015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
