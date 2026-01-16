@@ -30,11 +30,11 @@ jobs:
 
       # 步骤1：抓取组播源
       - name: Grab multicast sources
-        run: python py/grab_multicast.py
+        run: python py/zubo.py
 
       # 步骤2：合并 & 清洗所有小文件 → 生成 all_multicast.m3u
       - name: Merge and clean multicast files
-        run: python py/merge_clean_multicast.py
+        run: python py/clean_zubo.py
 
       # 步骤3：提交变更（包含原始小文件 + 合并后的大文件）
       - name: Commit and push changes
@@ -42,8 +42,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          git add test_multicast/*.m3u || true
-          git add test_multicast/all_multicast.m3u || true  # 大文件
+          git add zubo/*.m3u || true
+          git add zubo/zuboall.m3u || true  # 大文件
           
           git status --short
           
