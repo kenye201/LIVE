@@ -34,7 +34,7 @@ jobs:
 
       # 步骤2：合并 & 清洗所有小文件 → 生成 all_multicast.m3u
       - name: Merge and clean multicast files
-        run: python py/clean_zubo.py
+        run: python py/merge_zubo.py
 
       # 步骤3：提交变更（包含原始小文件 + 合并后的大文件）
       - name: Commit and push changes
