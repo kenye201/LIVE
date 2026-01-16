@@ -9,7 +9,7 @@ import random   # ← 这里添加了！必须导入
 # ===============================
 M3U_DIR = "test_multicast"         # 你的组播输出目录
 SAMPLE_COUNT = 3                   # 每个文件只抽测 3 个链接（节约资源）
-CHECK_TIMEOUT = 8                  # 超时时间（组播延迟高，8秒足够）
+CHECK_TIMEOUT = 15                  # 超时时间（组播延迟高，8秒足够）
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
