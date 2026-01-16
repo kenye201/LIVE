@@ -80,40 +80,49 @@ def scan_ip_port(ip, port):
         time.sleep(random.uniform(2, 4))
         print(f"  生成页面: {generate_url}")
         
-        res = requests.get(generate_url, headers=get_headers(), timeout=TIMEOUT)
+        res = requests.get(generate_url, headers=get_headers(), timeout=TIMEOUT, allow_redirects=True)
         if res.status_code != 200:
             print(f"  生成页面失败: 状态码 {res.status_code}")
             return None
         
-        # 提取真正的 M3U 下载链接（常见模式：href="/download/xxx.m3u" 或类似）
-        m3u_match = re.search(r'href="([^"]*\.m3u[^"]*)"', res.text, re.IGNORECASE)
-        if not m3u_match:
-            print("  未在页面找到 M3U 下载链接")
+        html = res.text
+        
+        # 更宽松匹配：任何 href 含 download=m3u 或 .m3u 的链接
+        m3u_matches = re.findall(r'href="([^"]*(?:download=m3u|\.m3u)[^"]*)"', html, re.IGNORECASE)
+        
+        if not m3u_matches:
+            print("  未在页面找到任何 M3U 相关下载链接（检查 HTML）")
+            # 调试：打印页面部分内容
+            print("页面片段预览:", html[:500])  # 看前500字符
             return None
         
-        m3u_path = m3u_match.group(1)
+        # 取第一个匹配的链接
+        m3u_path = m3u_matches[0]
         if m3u_path.startswith('/'):
+            m3u_url = "https://iptv.cqshushu.com" + m3u_path
+        elif m3u_path.startswith('?'):  # 参数链接，直接用完整域名
             m3u_url = "https://iptv.cqshushu.com" + m3u_path
         else:
             m3u_url = m3u_path
         
         print(f"  找到 M3U 下载链接: {m3u_url}")
         
-        # 请求真正的 M3U 文件
+        # 二次请求真正的 M3U
         time.sleep(random.uniform(1, 3))
         m3u_res = requests.get(m3u_url, headers=get_headers(), timeout=TIMEOUT, allow_redirects=True)
         
         if m3u_res.status_code == 200 and "#EXTINF" in m3u_res.text:
-            print(f"  M3U 下载成功，长度 {len(m3u_res.text)} 字符")
+            print(f"  M3U 下载成功，内容长度 {len(m3u_res.text)} 字符")
             return m3u_res.text
         else:
             print(f"  下载 M3U 失败: 状态码 {m3u_res.status_code}")
+            # 调试：如果失败，打印响应头看是否重定向或Content-Type
+            print("响应头:", m3u_res.headers)
             return None
     
     except Exception as e:
         print(f"  请求异常: {e}")
         return None
-
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     print(f"🚀 启动组播源抓取任务 (目标: 后 {MAX_IP_COUNT} 个组播IP)")
