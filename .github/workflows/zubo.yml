@@ -28,79 +28,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      # 步骤1：抓取组播源（你的抓取脚本）
+      # 步骤1：抓取组播源
       - name: Grab multicast sources
         run: python py/grab_multicast.py
 
-      # 步骤2：合并所有 multicast_raw_*.m3u → all_multicast.m3u
-      - name: Merge all multicast m3u files
-        run: |
-          python - <<EOF
-          import os
-          import re
-          from datetime import datetime
+      # 步骤2：合并 & 清洗所有小文件 → 生成 clean_all_multicast.m3u
+      - name: Merge and clean multicast m3u files
+        run: python py/merge_clean_multicast.py
 
-          DIR = "test_multicast"
-          OUTPUT = "all_multicast.m3u"
-          HEADER = '#EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml"'
-
-          print("开始合并所有 multicast_raw_*.m3u 文件...")
-
-          if not os.path.exists(DIR):
-              print(f"目录 {DIR} 不存在，跳过合并")
-              exit(0)
-
-          files = [f for f in os.listdir(DIR) if f.startswith("multicast_raw_") and f.endswith(".m3u")]
-          if not files:
-              print("没有找到任何 multicast_raw_*.m3u 文件")
-              exit(0)
-
-          print(f"找到 {len(files)} 个文件，开始合并")
-
-          all_lines = [HEADER]
-          seen_channels = set()  # 去重：频道名 + URL 组合
-
-          for filename in sorted(files):
-              path = os.path.join(DIR, filename)
-              print(f"  处理: {filename}")
-              with open(path, "r", encoding="utf-8") as f:
-                  lines = f.readlines()
-
-              for i in range(0, len(lines), 2):
-                  if i+1 >= len(lines):
-                      break
-                  info = lines[i].strip()
-                  url = lines[i+1].strip()
-                  if not info.startswith("#EXTINF") or not url:
-                      continue
-
-                  # 提取频道名（去掉 tvg-name 等，保留纯名称）
-                  channel_name = re.sub(r'^#EXTINF:.*?,', '', info).strip()
-                  key = f"{channel_name}|{url}"
-                  if key in seen_channels:
-                      continue
-                  seen_channels.add(key)
-
-                  all_lines.append(info)
-                  all_lines.append(url)
-
-          if len(all_lines) > 1:
-              with open(OUTPUT, "w", encoding="utf-8") as f:
-                  f.write("\n".join(all_lines) + "\n")
-              print(f"合并完成！生成 {OUTPUT}，共 {len(seen_channels)} 个唯一频道")
-          else:
-              print("无有效频道，跳过生成")
-          EOF
-
-      # 步骤3：提交所有变更（包括抓取的 + 合并的大文件）
+      # 步骤3：提交变更（包含原始小文件 + 清洗后的大文件）
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 添加抓取的文件 + 合并后的大文件
           git add test_multicast/*.m3u || true
-          git add all_multicast.m3u || true
+          git add clean_all_multicast.m3u || true
           
           git status --short
           
@@ -109,20 +52,9 @@ jobs:
             exit 0
           fi
           
-          git commit -m "自动抓取 & 合并组播源 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "自动抓取 & 清洗合并组播源 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           
           git push origin HEAD:main || {
             git pull origin main --rebase
             git push origin HEAD:main || echo "推送失败"
           }
-
-      # 步骤4：显示总结
-      - name: Show summary
-        if: always()
-        run: |
-          echo "=== 最终结果 ==="
-          echo "抓取目录文件数:"
-          ls -lh test_multicast/ || echo "无文件"
-          echo ""
-          echo "合并后大文件:"
-          ls -lh all_multicast.m3u || echo "未生成"
