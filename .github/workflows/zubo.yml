@@ -31,6 +31,10 @@ jobs:
       # 步骤1：抓取组播源
       - name: Grab multicast sources
         run: python py/grab_multicast.py
+        
+      #步骤2：清理失效文件（已注释，暂时不运行）
+    # - name: Cleanup invalid m3u files
+    #   run: python py/cleanup_multicast.py
 
       # 步骤3：提交变更
       - name: Commit and push changes
