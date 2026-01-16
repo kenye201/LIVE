@@ -2,7 +2,7 @@ name: Grab & Merge Multicast Sources
 
 on:
   schedule:
-    - cron: "0 8 * * *"           # 每天北京时间 8:00（JST 9:00）
+    - cron: "0 */1 * * *"           # 每天北京时间 8:00（JST 9:00）
   workflow_dispatch:              # 支持手动触发
 
 jobs:
