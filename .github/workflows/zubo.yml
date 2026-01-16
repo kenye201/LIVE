@@ -1,84 +1,66 @@
-name: Grab Multicast Sources from cqshushu
+name: Grab & Cleanup Multicast Sources
 
 on:
   schedule:
-    - cron: "0 8 * * *"          # 每天北京时间 8:00 运行一次（JST 9:00）
-  workflow_dispatch:             # 支持网页手动触发
+    - cron: "0 8 * * *"           # 每天北京时间 8:00（JST 9:00）
+  workflow_dispatch:              # 支持手动触发
 
 jobs:
-  grab-and-commit:
+  grab-and-clean:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      # 1. 检出仓库
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
 
-      # 2. 设置 Python 环境
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 3. 安装依赖（requests + 其他常用库）
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
-      # 4. 运行抓取脚本（假设你的脚本文件名为 grab_multicast.py）
-      - name: Run multicast grabber script
+      # 步骤1：抓取组播源
+      - name: Grab multicast sources
         run: python py/grab_multicast.py
-        env:
-          PYTHONUNBUFFERED: "1"          # 示例：强制 Python 输出不缓冲
-          # 不要写空的 KEY: ''
 
-      # 5. 防止冲突：先 pull 最新
-      - name: Pull latest changes
-        run: |
-          git fetch origin
-          git pull origin main --rebase || git pull origin main --no-rebase || echo "pull 失败，继续"
+      # 步骤2：清理失效文件
+      - name: Cleanup invalid m3u files
+        run: python py/cleanup_multicast.py
 
-      # 6. Commit & Push 生成的文件
-      - name: Commit and push grabbed files
+      # 步骤3：提交变更
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 添加所有生成的 m3u 文件（test_multicast/ 目录下）
           git add test_multicast/*.m3u || true
           
-          # 检查是否有变更
           git status --short
           
           if git diff --cached --quiet; then
-            echo "⚠️ 没有新抓取的文件，跳过 commit & push"
+            echo "⚠️ 无变更，跳过提交"
             exit 0
           fi
           
-          # commit
-          git commit -m "自动抓取组播源更新 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "自动抓取 & 清理组播源 - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           
-          # push（带防冲突）
           git push origin HEAD:main || {
-            echo "push 失败，尝试 rebase 后重试"
             git pull origin main --rebase
-            git push origin HEAD:main || echo "⚠️ 最终推送失败，请检查"
+            git push origin HEAD:main || echo "推送失败"
           }
 
-      # 7. 总结输出（可选，便于日志查看）
-      - name: Show results
+      # 步骤4：显示结果总结
+      - name: Show summary
         if: always()
         run: |
-          echo "=== 抓取结果总结 ==="
-          if [ -d "test_multicast" ]; then
-            ls -l test_multicast/ || echo "目录为空"
-            find test_multicast/ -name "*.m3u" -exec wc -l {} \; || echo "无 m3u 文件"
-          else
-            echo "未生成 test_multicast 目录"
-          fi
+          echo "=== 最终结果 ==="
+          ls -lh test_multicast/ || echo "无文件"
