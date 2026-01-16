@@ -9,7 +9,7 @@ import random
 # 配置区（组播专用）
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
-OUTPUT_DIR = "test_multicast"          # 输出目录改为组播专用
+OUTPUT_DIR = "zubo"          # 输出目录改为组播专用
 MAX_IP_COUNT = 6                       # 后 6 个组播 IP
 TIMEOUT = 12
 
