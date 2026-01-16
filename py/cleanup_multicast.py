@@ -2,34 +2,34 @@ import os
 import re
 import requests
 import concurrent.futures
+import random   # ← 这里添加了！必须导入
 
 # ===============================
 # 配置区（针对你的组播目录）
 # ===============================
-M3U_DIR = "test_multicast"         # ← 修改为你的组播输出目录
-SAMPLE_COUNT = 3                   # 每个文件抽测 3 个频道（组播源通常 1 个通就够，降低负载）
-CHECK_TIMEOUT = 8                  # 每个链接探测超时（组播延迟高，建议 8~10 秒）
+M3U_DIR = "test_multicast"         # 你的组播输出目录
+SAMPLE_COUNT = 3                   # 每个文件只抽测 3 个链接（节约资源）
+CHECK_TIMEOUT = 8                  # 超时时间（组播延迟高，8秒足够）
+
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
 def check_link(url):
-    """检测单个直播源链接是否有效（只 HEAD + 小量 GET）"""
     try:
         # 先 HEAD（最快）
         response = requests.head(url, headers=HEADERS, timeout=CHECK_TIMEOUT, allow_redirects=True)
         if response.status_code == 200:
             return True
         
-        # HEAD 失败再 GET（只读少量字节）
+        # HEAD 不行再 GET（只读一点点）
         response = requests.get(url, headers=HEADERS, timeout=CHECK_TIMEOUT, stream=True)
-        response.raw.read(1024)  # 读一点点就停
+        response.raw.read(1024)  # 读 1KB 就停
         return response.status_code == 200
     except:
         return False
 
 def is_m3u_alive(file_path):
-    """判断一个 m3u 文件是否还有效（至少 1 个链接通）"""
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -40,18 +40,16 @@ def is_m3u_alive(file_path):
         
         # 提取所有 http(s) 链接
         links = re.findall(r'https?://[^\s\'"]+', content)
-        
         if not links:
             print("  无任何链接，判失效")
             return False
         
-        # 随机抽样（避免总是测前几个失效的）
+        # 随机打乱 + 抽样（防止总是测前几个失效的）
         random.shuffle(links)
         test_links = links[:SAMPLE_COUNT]
         
         print(f"  测试 {len(test_links)} 个链接... ", end="", flush=True)
         
-        # 并发探测
         with concurrent.futures.ThreadPoolExecutor(max_workers=SAMPLE_COUNT) as executor:
             results = list(executor.map(check_link, test_links))
         
