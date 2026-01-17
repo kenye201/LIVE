@@ -1,8 +1,8 @@
 import os
 import re
 
-INPUT_DIR = "test"
-OUTPUT_FILE = "test/hotel_all.m3u"
+INPUT_DIR = "hotel"
+OUTPUT_FILE = "hotel/hotel_all.m3u"
 LOGO_BASE_URL = "https://gcore.jsdelivr.net/gh/taksssss/tv/icon"
 
 def clean_group_title(line):
