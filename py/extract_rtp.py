@@ -2,9 +2,9 @@ import os
 import re
 
 # 配置路径
-SOURCE_DIR = "py/zubo"      # 存放原始 m3u 文件的目录
-RTP_TARGET_DIR = "py/fofa/rtp" # 生成的 RTP 文本保存目录
-LOG_FILE = "py/fofa/rtp/mapping_log.txt" # 详细信息记录文件
+SOURCE_DIR = "zubo"      # 存放原始 m3u 文件的目录
+RTP_TARGET_DIR = "py/rtp" # 生成的 RTP 文本保存目录
+LOG_FILE = "py/rtp/mapping_log.txt" # 详细信息记录文件
 
 def extract_and_classify():
     if not os.path.exists(RTP_TARGET_DIR):
