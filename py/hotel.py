@@ -9,7 +9,7 @@ import random
 # 深度配置区
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
-OUTPUT_DIR = "test"
+OUTPUT_DIR = "hotel"
 MAX_IP_COUNT = 6  
 TIMEOUT = 12 
 
