@@ -1,0 +1,151 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV1综合高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV1综合高清
+http://39.88.46.73:85/tsfile/live/0002_2.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV2财经高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV2财经高清
+http://39.88.46.73:85/tsfile/live/0002_3.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV3综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV3综艺
+http://39.88.46.73:85/tsfile/live/0002_4.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV4中文国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV4中文国际
+http://39.88.46.73:85/tsfile/live/0002_5.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV5体育
+http://39.88.46.73:85/tsfile/live/0002_6.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV5+体育赛事
+http://39.88.46.73:85/tsfile/live/0005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV6电影
+http://39.88.46.73:85/tsfile/live/0002_7.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7军事 农业" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV7军事 农业
+http://39.88.46.73:85/tsfile/live/0002_8.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV8电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV8电视剧
+http://39.88.46.73:85/tsfile/live/0002_9.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV9记录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV9记录
+http://39.88.46.73:85/tsfile/live/0002_10.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV10科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV10科教
+http://39.88.46.73:85/tsfile/live/0002_11.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV11戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV11戏曲
+http://39.88.46.73:85/tsfile/live/0002_12.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV12社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV12社会与法
+http://39.88.46.73:85/tsfile/live/0002_13.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV13新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV13新闻
+http://39.88.46.73:85/tsfile/live/0002_14.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV14少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV14少儿
+http://39.88.46.73:85/tsfile/live/0002_15.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV15音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CCTV15音乐
+http://39.88.46.73:85/tsfile/live/0002_16.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="QTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",QTV-1
+http://39.88.46.73:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="QTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",QTV-6
+http://39.88.46.73:85/tsfile/live/0002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="QTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",QTV-3
+http://39.88.46.73:85/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="QTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",QTV-4
+http://39.88.46.73:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",河南卫视
+http://39.88.46.73:85/tsfile/live/0139_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东卫视
+http://39.88.46.73:85/tsfile/live/0002_17.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",湖南卫视高清
+http://39.88.46.73:85/tsfile/live/0002_18.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",浙江卫视高清
+http://39.88.46.73:85/tsfile/live/0002_19.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东方卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",东方卫视高清
+http://39.88.46.73:85/tsfile/live/0002_20.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",江苏卫视高清
+http://39.88.46.73:85/tsfile/live/0002_21.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",北京卫视高清
+http://39.88.46.73:85/tsfile/live/0002_22.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",安徽卫视高清
+http://39.88.46.73:85/tsfile/live/0002_23.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="深圳卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",深圳卫视高清
+http://39.88.46.73:85/tsfile/live/0002_24.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",湖北卫视高清
+http://39.88.46.73:85/tsfile/live/0002_25.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",广东卫视高清
+http://39.88.46.73:85/tsfile/live/0002_26.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",辽宁卫视高清
+http://39.88.46.73:85/tsfile/live/0002_27.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="黑龙江卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",黑龙江卫视高清
+http://39.88.46.73:85/tsfile/live/0002_28.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",江西卫视
+http://39.88.46.73:85/tsfile/live/0002_29.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",重庆卫视
+http://39.88.46.73:85/tsfile/live/0002_30.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",东南卫视
+http://39.88.46.73:85/tsfile/live/0002_31.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",四川卫视
+http://39.88.46.73:85/tsfile/live/0002_32.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",贵州卫视
+http://39.88.46.73:85/tsfile/live/0002_33.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山西卫视
+http://39.88.46.73:85/tsfile/live/0002_34.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",陕西卫视
+http://39.88.46.73:85/tsfile/live/0002_35.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="旅游卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",旅游卫视
+http://39.88.46.73:85/tsfile/live/0002_36.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",吉林卫视
+http://39.88.46.73:85/tsfile/live/0002_37.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",甘肃卫视
+http://39.88.46.73:85/tsfile/live/0002_38.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",宁夏卫视
+http://39.88.46.73:85/tsfile/live/0002_39.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",青海卫视
+http://39.88.46.73:85/tsfile/live/0002_40.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",西藏卫视
+http://39.88.46.73:85/tsfile/live/0002_41.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",新疆卫视
+http://39.88.46.73:85/tsfile/live/0002_42.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",内蒙古卫视
+http://39.88.46.73:85/tsfile/live/0002_43.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="兵团卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",兵团卫视
+http://39.88.46.73:85/tsfile/live/0002_44.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="农林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",农林卫视
+http://39.88.46.73:85/tsfile/live/0002_45.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CETV1中国教育1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CETV1中国教育1
+http://39.88.46.73:85/tsfile/live/0002_46.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="BTVKAKU少儿卡酷动画" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",BTVKAKU少儿卡酷动画
+http://39.88.46.73:85/tsfile/live/0002_47.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="炫动卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",炫动卡通
+http://39.88.46.73:85/tsfile/live/0002_48.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东综艺
+http://39.88.46.73:85/tsfile/live/0002_49.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东教育
+http://39.88.46.73:85/tsfile/live/0002_50.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CETV2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CETV2
+http://39.88.46.73:85/tsfile/live/0002_51.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东居家购物" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东居家购物
+http://39.88.46.73:85/tsfile/live/0002_52.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东新闻
+http://39.88.46.73:85/tsfile/live/0002_53.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东少儿
+http://39.88.46.73:85/tsfile/live/0002_54.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东农科" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东农科
+http://39.88.46.73:85/tsfile/live/0002_55.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",山东卫视
+http://39.88.46.73:85/tsfile/live/0002_56.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",东南卫视
+http://39.88.46.73:85/tsfile/live/0002_57.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",浙江卫视
+http://39.88.46.73:85/tsfile/live/0002_58.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",东方卫视
+http://39.88.46.73:85/tsfile/live/0002_59.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="三沙卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",三沙卫视
+http://39.88.46.73:85/tsfile/live/0002_60.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="BTV北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",BTV北京卫视
+http://39.88.46.73:85/tsfile/live/0002_61.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",安徽卫视
+http://39.88.46.73:85/tsfile/live/0002_62.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="发现之旅" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",发现之旅
+http://39.88.46.73:85/tsfile/live/0002_63.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",天津卫视
+http://39.88.46.73:85/tsfile/live/0002_64.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",湖北卫视
+http://39.88.46.73:85/tsfile/live/0002_65.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="中学生" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",中学生
+http://39.88.46.73:85/tsfile/live/0002_66.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",辽宁卫视
+http://39.88.46.73:85/tsfile/live/0002_67.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",CHC动作电影
+http://39.88.46.73:85/tsfile/live/0002_68.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="海看教育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",海看教育
+http://39.88.46.73:85/tsfile/live/0002_69.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="海看演艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="山东省青岛市酒店 山东联通",海看演艺
+http://39.88.46.73:85/tsfile/live/0002_70.m3u8?key=txiptv&amp;playlive=1&amp;authid=0

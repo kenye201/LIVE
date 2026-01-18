@@ -1,0 +1,101 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV1-综合
+http://123.154.106.57:85/tsfile/live/1013_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV2-财经
+http://123.154.106.57:85/tsfile/live/1014_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV3-综艺
+http://123.154.106.57:85/tsfile/live/1015_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV4-国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV4-国际
+http://123.154.106.57:85/tsfile/live/1016_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV5-体育
+http://123.154.106.57:85/tsfile/live/1017_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV6-电影
+http://123.154.106.57:85/tsfile/live/1018_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV7-军农
+http://123.154.106.57:85/tsfile/live/1019_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV8-电视剧
+http://123.154.106.57:85/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV9-纪录
+http://123.154.106.57:85/tsfile/live/1021_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV10-科教
+http://123.154.106.57:85/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV11-戏曲
+http://123.154.106.57:85/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV12-社会与法
+http://123.154.106.57:85/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV13-新闻
+http://123.154.106.57:85/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV14-少儿
+http://123.154.106.57:85/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",CCTV15-音乐
+http://123.154.106.57:85/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",北京卫视
+http://123.154.106.57:85/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",江苏卫视
+http://123.154.106.57:85/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",东方卫视
+http://123.154.106.57:85/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",湖南卫视
+http://123.154.106.57:85/tsfile/live/1031_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",安徽卫视
+http://123.154.106.57:85/tsfile/live/1032_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",重庆卫视
+http://123.154.106.57:85/tsfile/live/1033_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",广东卫视
+http://123.154.106.57:85/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",四川卫视
+http://123.154.106.57:85/tsfile/live/1035_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",江西卫视
+http://123.154.106.57:85/tsfile/live/1036_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",贵州卫视
+http://123.154.106.57:85/tsfile/live/1037_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",山东卫视
+http://123.154.106.57:85/tsfile/live/1038_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",辽宁卫视
+http://123.154.106.57:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",吉林卫视
+http://123.154.106.57:85/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",天津卫视
+http://123.154.106.57:85/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",黑龙江卫视
+http://123.154.106.57:85/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",东南卫视
+http://123.154.106.57:85/tsfile/live/1042_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",河南卫视
+http://123.154.106.57:85/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",湖北卫视
+http://123.154.106.57:85/tsfile/live/1044_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",陕西卫视
+http://123.154.106.57:85/tsfile/live/1045_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",山西卫视
+http://123.154.106.57:85/tsfile/live/1046_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",广西卫视
+http://123.154.106.57:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",云南卫视
+http://123.154.106.57:85/tsfile/live/1048_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",河北卫视
+http://123.154.106.57:85/tsfile/live/1049_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",金鹰卡通
+http://123.154.106.57:85/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="哈哈炫动" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",哈哈炫动
+http://123.154.106.57:85/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",内蒙古卫视
+http://123.154.106.57:85/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",宁夏卫视
+http://123.154.106.57:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",西藏卫视
+http://123.154.106.57:85/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",青海卫视
+http://123.154.106.57:85/tsfile/live/1050_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",甘肃卫视
+http://123.154.106.57:85/tsfile/live/1051_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",浙江卫视
+http://123.154.106.57:85/tsfile/live/1052_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="钱江频道" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",钱江频道
+http://123.154.106.57:85/tsfile/live/1053_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="经济生活" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",经济生活
+http://123.154.106.57:85/tsfile/live/1054_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="科教影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",科教影视
+http://123.154.106.57:85/tsfile/live/1055_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="浙江新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="浙江省温州市酒店 浙江联通",浙江新闻
+http://123.154.106.57:85/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
