@@ -1,0 +1,81 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV1-综合
+http://175.155.126.120:85/tsfile/live/faacts/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV2-财经
+http://175.155.126.120:85/tsfile/live/faacts/0002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV3-综艺
+http://175.155.126.120:85/tsfile/live/faacts/0003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV4-国际" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV4-国际
+http://175.155.126.120:85/tsfile/live/faacts/0004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV5-体育
+http://175.155.126.120:85/tsfile/live/faacts/0005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV5+体育赛事
+http://175.155.126.120:85/tsfile/live/faacts/0016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV6-电影
+http://175.155.126.120:85/tsfile/live/faacts/0006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV7-军农
+http://175.155.126.120:85/tsfile/live/faacts/0007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV8-电视剧
+http://175.155.126.120:85/tsfile/live/faacts/0008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV9-纪录
+http://175.155.126.120:85/tsfile/live/faacts/0009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV10-科教
+http://175.155.126.120:85/tsfile/live/faacts/0010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV11-戏曲
+http://175.155.126.120:85/tsfile/live/faacts/0011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV12-社会与法
+http://175.155.126.120:85/tsfile/live/faacts/0012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV13-新闻
+http://175.155.126.120:85/tsfile/live/faacts/0013_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV14-少儿
+http://175.155.126.120:85/tsfile/live/faacts/0014_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",CCTV15-音乐
+http://175.155.126.120:85/tsfile/live/faacts/0015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
+#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",安徽卫视
+http://175.155.126.120:85/tsfile/live/faacts/0130_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",浙江卫视
+http://175.155.126.120:85/tsfile/live/faacts/0124_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",河南卫视
+http://175.155.126.120:85/tsfile/live/faacts/0139_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",天津卫视
+http://175.155.126.120:85/tsfile/live/faacts/0135_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",辽宁卫视
+http://175.155.126.120:85/tsfile/live/faacts/0121_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",山东卫视
+http://175.155.126.120:85/tsfile/live/faacts/0131_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",云南卫视
+http://175.155.126.120:85/tsfile/live/faacts/0119_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",湖南卫视
+http://175.155.126.120:85/tsfile/live/faacts/0128_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",北京卫视
+http://175.155.126.120:85/tsfile/live/faacts/0122_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",上海卫视
+http://175.155.126.120:85/tsfile/live/faacts/0107_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",江西卫视
+http://175.155.126.120:85/tsfile/live/faacts/0138_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",贵州卫视
+http://175.155.126.120:85/tsfile/live/faacts/0120_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",湖北卫视
+http://175.155.126.120:85/tsfile/live/faacts/0132_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",重庆卫视
+http://175.155.126.120:85/tsfile/live/faacts/0142_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",东南卫视
+http://175.155.126.120:85/tsfile/live/faacts/0137_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",河北卫视
+http://175.155.126.120:85/tsfile/live/faacts/0117_2.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",江苏卫视
+http://175.155.126.120:85/tsfile/live/faacts/0127_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",深圳卫视
+http://175.155.126.120:85/tsfile/live/faacts/0126_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",广西卫视
+http://175.155.126.120:85/tsfile/live/faacts/0113_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="吉林卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",吉林卫视
+http://175.155.126.120:85/tsfile/live/faacts/0116_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",山西卫视
+http://175.155.126.120:85/tsfile/live/0118_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",黑龙江卫视
+http://175.155.126.120:85/tsfile/live/faacts/0143_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",广东卫视
+http://175.155.126.120:85/tsfile/live/faacts/0125_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
+#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="四川省成都市酒店 四川联通",四川卫视
+http://175.155.126.120:85/tsfile/live/faacts/0123_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
