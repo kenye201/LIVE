@@ -6,7 +6,7 @@ import concurrent.futures
 # ===============================
 # 配置区
 # ===============================
-M3U_DIR = "test"              # m3u 文件存放目录
+M3U_DIR = "hotel"              # m3u 文件存放目录
 SAMPLE_COUNT = 5              # 每个文件抽测多少个频道
 CHECK_TIMEOUT = 10            # 每个链接的探测超时时间
 HEADERS = {
