@@ -1,0 +1,45 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-1
+http://123.55.210.95:9901/tsfile/live/1000_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-2
+http://123.55.210.95:9901/tsfile/live/1001_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-3
+http://123.55.210.95:9901/tsfile/live/1002_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-4
+http://123.55.210.95:9901/tsfile/live/1003_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-5
+http://123.55.210.95:9901/tsfile/live/1004_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-6
+http://123.55.210.95:9901/tsfile/live/1005_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-7" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-7
+http://123.55.210.95:9901/tsfile/live/1006_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-8" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-8
+http://123.55.210.95:9901/tsfile/live/1007_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-9
+http://123.55.210.95:9901/tsfile/live/1008_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-10" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-10
+http://123.55.210.95:9901/tsfile/live/1009_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-11" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-11
+http://123.55.210.95:9901/tsfile/live/1010_1.m3u8
+#EXTINF:-1 tvg-id="CCGV-12" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCGV-12
+http://123.55.210.95:9901/tsfile/live/1011_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-13" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-13
+http://123.55.210.95:9901/tsfile/live/1012_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-14" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-14
+http://123.55.210.95:9901/tsfile/live/1013_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-15" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",CCTV-15
+http://123.55.210.95:9901/tsfile/live/1014_1.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",河南卫视
+http://123.55.210.95:9901/tsfile/live/1015_1.m3u8
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",东方卫视
+http://123.55.210.95:9901/tsfile/live/1016_1.m3u8
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",江苏卫视
+http://123.55.210.95:9901/tsfile/live/1017_1.m3u8
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",湖南卫视
+http://123.55.210.95:9901/tsfile/live/1018_1.m3u8
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",北京卫视
+http://123.55.210.95:9901/tsfile/live/1019_1.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",浙江卫视
+http://123.55.210.95:9901/tsfile/live/1020_1.m3u8
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="河南省周口市酒店 河南电信",广东卫视
+http://123.55.210.95:9901/tsfile/live/1021_1.m3u8

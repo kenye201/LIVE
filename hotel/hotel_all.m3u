@@ -1,4 +1,48 @@
 #EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml"
+#EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-1.png" group-title="河南电信",CCTV-1
+http://123.55.210.95:9901/tsfile/live/1000_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-2.png" group-title="河南电信",CCTV-2
+http://123.55.210.95:9901/tsfile/live/1001_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-3.png" group-title="河南电信",CCTV-3
+http://123.55.210.95:9901/tsfile/live/1002_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-4.png" group-title="河南电信",CCTV-4
+http://123.55.210.95:9901/tsfile/live/1003_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-5.png" group-title="河南电信",CCTV-5
+http://123.55.210.95:9901/tsfile/live/1004_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-6.png" group-title="河南电信",CCTV-6
+http://123.55.210.95:9901/tsfile/live/1005_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-7" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-7.png" group-title="河南电信",CCTV-7
+http://123.55.210.95:9901/tsfile/live/1006_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-8" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-8.png" group-title="河南电信",CCTV-8
+http://123.55.210.95:9901/tsfile/live/1007_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-9" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-9.png" group-title="河南电信",CCTV-9
+http://123.55.210.95:9901/tsfile/live/1008_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-10" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-10.png" group-title="河南电信",CCTV-10
+http://123.55.210.95:9901/tsfile/live/1009_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-11" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-11.png" group-title="河南电信",CCTV-11
+http://123.55.210.95:9901/tsfile/live/1010_1.m3u8
+#EXTINF:-1 tvg-id="CCGV-12" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCGV-12.png" group-title="河南电信",CCGV-12
+http://123.55.210.95:9901/tsfile/live/1011_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-13" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-13.png" group-title="河南电信",CCTV-13
+http://123.55.210.95:9901/tsfile/live/1012_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-14" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-14.png" group-title="河南电信",CCTV-14
+http://123.55.210.95:9901/tsfile/live/1013_1.m3u8
+#EXTINF:-1 tvg-id="CCTV-15" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-15.png" group-title="河南电信",CCTV-15
+http://123.55.210.95:9901/tsfile/live/1014_1.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河南卫视.png" group-title="河南电信",河南卫视
+http://123.55.210.95:9901/tsfile/live/1015_1.m3u8
+#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/东方卫视.png" group-title="河南电信",东方卫视
+http://123.55.210.95:9901/tsfile/live/1016_1.m3u8
+#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江苏卫视.png" group-title="河南电信",江苏卫视
+http://123.55.210.95:9901/tsfile/live/1017_1.m3u8
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南卫视.png" group-title="河南电信",湖南卫视
+http://123.55.210.95:9901/tsfile/live/1018_1.m3u8
+#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/北京卫视.png" group-title="河南电信",北京卫视
+http://123.55.210.95:9901/tsfile/live/1019_1.m3u8
+#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/浙江卫视.png" group-title="河南电信",浙江卫视
+http://123.55.210.95:9901/tsfile/live/1020_1.m3u8
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/广东卫视.png" group-title="河南电信",广东卫视
+http://123.55.210.95:9901/tsfile/live/1021_1.m3u8
 #EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="广东电信",CCTV1-综合
 http://116.17.234.230:85/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="广东电信",CCTV2-财经
@@ -1429,50 +1473,6 @@ http://221.13.233.149:9901/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=1&amp
 http://221.13.233.149:9901/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金鹰卡通.png" group-title="河南联通",金鹰卡通
 http://221.13.233.149:9901/tsfile/live/1010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV-1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-1.png" group-title="河南电信",CCTV-1
-http://123.55.210.95:9901/tsfile/live/1000_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-2.png" group-title="河南电信",CCTV-2
-http://123.55.210.95:9901/tsfile/live/1001_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-3" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-3.png" group-title="河南电信",CCTV-3
-http://123.55.210.95:9901/tsfile/live/1002_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-4" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-4.png" group-title="河南电信",CCTV-4
-http://123.55.210.95:9901/tsfile/live/1003_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-5" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-5.png" group-title="河南电信",CCTV-5
-http://123.55.210.95:9901/tsfile/live/1004_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-6" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-6.png" group-title="河南电信",CCTV-6
-http://123.55.210.95:9901/tsfile/live/1005_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-7" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-7.png" group-title="河南电信",CCTV-7
-http://123.55.210.95:9901/tsfile/live/1006_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-8" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-8.png" group-title="河南电信",CCTV-8
-http://123.55.210.95:9901/tsfile/live/1007_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-9" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-9.png" group-title="河南电信",CCTV-9
-http://123.55.210.95:9901/tsfile/live/1008_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-10" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-10.png" group-title="河南电信",CCTV-10
-http://123.55.210.95:9901/tsfile/live/1009_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-11" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-11.png" group-title="河南电信",CCTV-11
-http://123.55.210.95:9901/tsfile/live/1010_1.m3u8
-#EXTINF:-1 tvg-id="CCGV-12" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCGV-12.png" group-title="河南电信",CCGV-12
-http://123.55.210.95:9901/tsfile/live/1011_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-13" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-13.png" group-title="河南电信",CCTV-13
-http://123.55.210.95:9901/tsfile/live/1012_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-14" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-14.png" group-title="河南电信",CCTV-14
-http://123.55.210.95:9901/tsfile/live/1013_1.m3u8
-#EXTINF:-1 tvg-id="CCTV-15" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-15.png" group-title="河南电信",CCTV-15
-http://123.55.210.95:9901/tsfile/live/1014_1.m3u8
-#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河南卫视.png" group-title="河南电信",河南卫视
-http://123.55.210.95:9901/tsfile/live/1015_1.m3u8
-#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/东方卫视.png" group-title="河南电信",东方卫视
-http://123.55.210.95:9901/tsfile/live/1016_1.m3u8
-#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江苏卫视.png" group-title="河南电信",江苏卫视
-http://123.55.210.95:9901/tsfile/live/1017_1.m3u8
-#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南卫视.png" group-title="河南电信",湖南卫视
-http://123.55.210.95:9901/tsfile/live/1018_1.m3u8
-#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/北京卫视.png" group-title="河南电信",北京卫视
-http://123.55.210.95:9901/tsfile/live/1019_1.m3u8
-#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/浙江卫视.png" group-title="河南电信",浙江卫视
-http://123.55.210.95:9901/tsfile/live/1020_1.m3u8
-#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/广东卫视.png" group-title="河南电信",广东卫视
-http://123.55.210.95:9901/tsfile/live/1021_1.m3u8
 #EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="河南电信",CCTV1-综合
 http://1.199.194.169:9901/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV-2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV-2.png" group-title="河南电信",CCTV-2
@@ -4319,148 +4319,6 @@ http://1.197.249.88:85/tsfile/live/0138_1.m3u8?key=txiptv&amp;playlive=1&amp;aut
 http://1.197.249.88:85/tsfile/live/0118_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金鹰卡通.png" group-title="河南电信",金鹰卡通
 http://1.197.249.88:85/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南卫视.png" group-title="湖南电信",湖南卫视
-http://175.8.30.132:9999/tsfile/live/0128_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南都市" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南都市.png" group-title="湖南电信",湖南都市
-http://175.8.30.132:9999/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南电视剧.png" group-title="湖南电信",湖南电视剧
-http://175.8.30.132:9999/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南电影" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南电影.png" group-title="湖南电信",湖南电影
-http://175.8.30.132:9999/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南娱乐" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南娱乐.png" group-title="湖南电信",湖南娱乐
-http://175.8.30.132:9999/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南经视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南经视.png" group-title="湖南电信",湖南经视
-http://175.8.30.132:9999/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南公共" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南公共.png" group-title="湖南电信",湖南公共
-http://175.8.30.132:9999/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="金鹰纪实" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金鹰纪实.png" group-title="湖南电信",金鹰纪实
-http://175.8.30.132:9999/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南教育" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南教育.png" group-title="湖南电信",湖南教育
-http://175.8.30.132:9999/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南国际" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南国际.png" group-title="湖南电信",湖南国际
-http://175.8.30.132:9999/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖南金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南金鹰卡通.png" group-title="湖南电信",湖南金鹰卡通
-http://175.8.30.132:9999/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="湖南电信",CCTV1-综合
-http://175.8.30.132:9999/tsfile/live/0001_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="湖南电信",CCTV2-财经
-http://175.8.30.132:9999/tsfile/live/0002_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV3.png" group-title="湖南电信",CCTV3-综艺
-http://175.8.30.132:9999/tsfile/live/0003_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV4-国际" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV4.png" group-title="湖南电信",CCTV4-国际
-http://175.8.30.132:9999/tsfile/live/0004_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV5.png" group-title="湖南电信",CCTV5-体育
-http://175.8.30.132:9999/tsfile/live/0005_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV6.png" group-title="湖南电信",CCTV6-电影
-http://175.8.30.132:9999/tsfile/live/0006_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV7.png" group-title="湖南电信",CCTV7-军农
-http://175.8.30.132:9999/tsfile/live/1036_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV8.png" group-title="湖南电信",CCTV8-电视剧
-http://175.8.30.132:9999/tsfile/live/0008_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV9.png" group-title="湖南电信",CCTV9-纪录
-http://175.8.30.132:9999/tsfile/live/0009_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV10.png" group-title="湖南电信",CCTV10-科教
-http://175.8.30.132:9999/tsfile/live/0010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV11.png" group-title="湖南电信",CCTV11-戏曲
-http://175.8.30.132:9999/tsfile/live/0011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV12.png" group-title="湖南电信",CCTV12-社会与法
-http://175.8.30.132:9999/tsfile/live/0012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV13.png" group-title="湖南电信",CCTV13-新闻
-http://175.8.30.132:9999/tsfile/live/1037_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV14.png" group-title="湖南电信",CCTV14-少儿
-http://175.8.30.132:9999/tsfile/live/1038_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV15.png" group-title="湖南电信",CCTV15-音乐
-http://175.8.30.132:9999/tsfile/live/0015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV17" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV17.png" group-title="湖南电信",CCTV17
-http://175.8.30.132:9999/tsfile/live/0019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山西卫视.png" group-title="湖南电信",山西卫视
-http://175.8.30.132:9999/tsfile/live/0118_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/宁夏卫视.png" group-title="湖南电信",宁夏卫视
-http://175.8.30.132:9999/tsfile/live/0112_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/西藏卫视.png" group-title="湖南电信",西藏卫视
-http://175.8.30.132:9999/tsfile/live/0111_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/新疆卫视.png" group-title="湖南电信",新疆卫视
-http://175.8.30.132:9999/tsfile/live/0110_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/甘肃卫视.png" group-title="湖南电信",甘肃卫视
-http://175.8.30.132:9999/tsfile/live/0141_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="BTV" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/BTV.png" group-title="湖南电信",BTV
-http://175.8.30.132:9999/tsfile/live/1011_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/南方卫视.png" group-title="湖南电信",南方卫视
-http://175.8.30.132:9999/tsfile/live/1012_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/青海卫视.png" group-title="湖南电信",青海卫视
-http://175.8.30.132:9999/tsfile/live/0140_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江苏卫视.png" group-title="湖南电信",江苏卫视
-http://175.8.30.132:9999/tsfile/live/0127_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/浙江卫视.png" group-title="湖南电信",浙江卫视
-http://175.8.30.132:9999/tsfile/live/0124_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/北京卫视.png" group-title="湖南电信",北京卫视
-http://175.8.30.132:9999/tsfile/live/0122_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/天津卫视.png" group-title="湖南电信",天津卫视
-http://175.8.30.132:9999/tsfile/live/0135_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="东方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/东方卫视.png" group-title="湖南电信",东方卫视
-http://175.8.30.132:9999/tsfile/live/0107_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/深圳卫视.png" group-title="湖南电信",深圳卫视
-http://175.8.30.132:9999/tsfile/live/0126_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山东卫视.png" group-title="湖南电信",山东卫视
-http://175.8.30.132:9999/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/黑龙江卫视.png" group-title="湖南电信",黑龙江卫视
-http://175.8.30.132:9999/tsfile/live/0143_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/安徽卫视.png" group-title="湖南电信",安徽卫视
-http://175.8.30.132:9999/tsfile/live/0130_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/辽宁卫视.png" group-title="湖南电信",辽宁卫视
-http://175.8.30.132:9999/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="东南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/东南卫视.png" group-title="湖南电信",东南卫视
-http://175.8.30.132:9999/tsfile/live/0137_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/广东卫视.png" group-title="湖南电信",广东卫视
-http://175.8.30.132:9999/tsfile/live/0125_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖北卫视.png" group-title="湖南电信",湖北卫视
-http://175.8.30.132:9999/tsfile/live/0132_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/贵州卫视.png" group-title="湖南电信",贵州卫视
-http://175.8.30.132:9999/tsfile/live/0120_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="河北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河北卫视.png" group-title="湖南电信",河北卫视
-http://175.8.30.132:9999/tsfile/live/0117_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="高清院线" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/高清院线.png" group-title="湖南电信",高清院线
-http://175.8.30.132:9999/tsfile/live/1015_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="抗战剧场" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/抗战剧场.png" group-title="湖南电信",抗战剧场
-http://175.8.30.132:9999/tsfile/live/1016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="古装剧场" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/古装剧场.png" group-title="湖南电信",古装剧场
-http://175.8.30.132:9999/tsfile/live/1017_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="家庭剧场" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/家庭剧场.png" group-title="湖南电信",家庭剧场
-http://175.8.30.132:9999/tsfile/live/1018_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="金典剧场" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金典剧场.png" group-title="湖南电信",金典剧场
-http://175.8.30.132:9999/tsfile/live/1019_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="优优宝贝" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/优优宝贝.png" group-title="湖南电信",优优宝贝
-http://175.8.30.132:9999/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="人物" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/人物.png" group-title="湖南电信",人物
-http://175.8.30.132:9999/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="高尔夫" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/高尔夫.png" group-title="湖南电信",高尔夫
-http://175.8.30.132:9999/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="先锋兵羽" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/先锋兵羽.png" group-title="湖南电信",先锋兵羽
-http://175.8.30.132:9999/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CETV1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CETV1.png" group-title="湖南电信",CETV1
-http://175.8.30.132:9999/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/四川卫视.png" group-title="湖南电信",四川卫视
-http://175.8.30.132:9999/tsfile/live/0123_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="优漫卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/优漫卡通.png" group-title="湖南电信",优漫卡通
-http://175.8.30.132:9999/tsfile/live/1010_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="重庆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/重庆卫视.png" group-title="湖南电信",重庆卫视
-http://175.8.30.132:9999/tsfile/live/0142_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="云南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/云南卫视.png" group-title="湖南电信",云南卫视
-http://175.8.30.132:9999/tsfile/live/0119_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河南卫视.png" group-title="湖南电信",河南卫视
-http://175.8.30.132:9999/tsfile/live/0139_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV5.png" group-title="湖南电信",CCTV5+体育赛事
-http://175.8.30.132:9999/tsfile/live/0016_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="新动漫" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/新动漫.png" group-title="湖南电信",新动漫
-http://175.8.30.132:9999/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CHC家庭影院" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CHC家庭影院.png" group-title="湖南电信",CHC家庭影院
-http://175.8.30.132:9999/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CHC高清电影" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CHC高清电影.png" group-title="湖南电信",CHC高清电影
-http://175.8.30.132:9999/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CHC动作影院" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CHC动作影院.png" group-title="湖南电信",CHC动作影院
-http://175.8.30.132:9999/tsfile/live/1031_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="靖港测试" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/靖港测试.png" group-title="湖南电信",靖港测试
-http://175.8.30.132:9999/tsfile/live/41273_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="山西联通",CCTV1
 http://183.191.54.224:9003/hls/1/index.m3u8
 #EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="山西联通",CCTV2
@@ -4715,106 +4573,6 @@ http://171.127.54.187:888/tsfile/live/0139_1.m3u8?key=txiptv&amp;playlive=1&amp;
 http://171.127.54.187:888/tsfile/live/0140_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
 #EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/甘肃卫视.png" group-title="山西联通",甘肃卫视
 http://171.127.54.187:888/tsfile/live/0141_1.m3u8?key=txiptv&amp;playlive=1&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV1-综合" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="四川联通",CCTV1-综合
-http://175.155.100.72:85/tsfile/live/1000_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV2-财经" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="四川联通",CCTV2-财经
-http://175.155.100.72:85/tsfile/live/1002_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV3-综艺" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV3.png" group-title="四川联通",CCTV3-综艺
-http://175.155.100.72:85/tsfile/live/1003_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV4-国际" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV4.png" group-title="四川联通",CCTV4-国际
-http://175.155.100.72:85/tsfile/live/1004_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5-体育" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV5.png" group-title="四川联通",CCTV5-体育
-http://175.155.100.72:85/tsfile/live/1006_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV6-电影" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV6.png" group-title="四川联通",CCTV6-电影
-http://175.155.100.72:85/tsfile/live/1007_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV7-军农" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV7.png" group-title="四川联通",CCTV7-军农
-http://175.155.100.72:85/tsfile/live/1008_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV8-电视剧" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV8.png" group-title="四川联通",CCTV8-电视剧
-http://175.155.100.72:85/tsfile/live/1009_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV9-纪录" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV9.png" group-title="四川联通",CCTV9-纪录
-http://175.155.100.72:85/tsfile/live/1011_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV10-科教" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV10.png" group-title="四川联通",CCTV10-科教
-http://175.155.100.72:85/tsfile/live/1012_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV11-戏曲" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV11.png" group-title="四川联通",CCTV11-戏曲
-http://175.155.100.72:85/tsfile/live/1013_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV12-社会与法" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV12.png" group-title="四川联通",CCTV12-社会与法
-http://175.155.100.72:85/tsfile/live/1014_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV13-新闻" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV13.png" group-title="四川联通",CCTV13-新闻
-http://175.155.100.72:85/tsfile/live/1015_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV14-少儿" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV14.png" group-title="四川联通",CCTV14-少儿
-http://175.155.100.72:85/tsfile/live/1016_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV15-音乐" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV15.png" group-title="四川联通",CCTV15-音乐
-http://175.155.100.72:85/tsfile/live/1017_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="CCTV5+体育赛事" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV5.png" group-title="四川联通",CCTV5+体育赛事
-http://175.155.100.72:85/tsfile/live/1028_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="四川卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/四川卫视.png" group-title="四川联通",四川卫视
-http://175.155.100.72:85/tsfile/live/1018_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/北京卫视.png" group-title="四川联通",北京卫视
-http://175.155.100.72:85/tsfile/live/1019_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="天津卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/天津卫视.png" group-title="四川联通",天津卫视
-http://175.155.100.72:85/tsfile/live/1020_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="山东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/山东卫视.png" group-title="四川联通",山东卫视
-http://175.155.100.72:85/tsfile/live/1021_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江苏卫视.png" group-title="四川联通",江苏卫视
-http://175.155.100.72:85/tsfile/live/1022_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/浙江卫视.png" group-title="四川联通",浙江卫视
-http://175.155.100.72:85/tsfile/live/1023_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="上海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/上海卫视.png" group-title="四川联通",上海卫视
-http://175.155.100.72:85/tsfile/live/1024_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="安徽卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/安徽卫视.png" group-title="四川联通",安徽卫视
-http://175.155.100.72:85/tsfile/live/1025_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="湖北卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖北卫视.png" group-title="四川联通",湖北卫视
-http://175.155.100.72:85/tsfile/live/1026_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/湖南卫视.png" group-title="四川联通",湖南卫视
-http://175.155.100.72:85/tsfile/live/1027_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/广东卫视.png" group-title="四川联通",广东卫视
-http://175.155.100.72:85/tsfile/live/1029_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="深圳卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/深圳卫视.png" group-title="四川联通",深圳卫视
-http://175.155.100.72:85/tsfile/live/1030_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/黑龙江卫视.png" group-title="四川联通",黑龙江卫视
-http://175.155.100.72:85/tsfile/live/1031_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/辽宁卫视.png" group-title="四川联通",辽宁卫视
-http://175.155.100.72:85/tsfile/live/1032_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/河南卫视.png" group-title="四川联通",河南卫视
-http://175.155.100.72:85/tsfile/live/1033_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="江西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/江西卫视.png" group-title="四川联通",江西卫视
-http://175.155.100.72:85/tsfile/live/1034_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="贵州卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/贵州卫视.png" group-title="四川联通",贵州卫视
-http://175.155.100.72:85/tsfile/live/1035_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/宁夏卫视.png" group-title="四川联通",宁夏卫视
-http://175.155.100.72:85/tsfile/live/1036_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/青海卫视.png" group-title="四川联通",青海卫视
-http://175.155.100.72:85/tsfile/live/1037_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/新疆卫视.png" group-title="四川联通",新疆卫视
-http://175.155.100.72:85/tsfile/live/1038_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="海南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/海南卫视.png" group-title="四川联通",海南卫视
-http://175.155.100.72:85/tsfile/live/1001_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金鹰卡通.png" group-title="四川联通",金鹰卡通
-http://175.155.100.72:85/tsfile/live/1039_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/甘肃卫视.png" group-title="四川联通",甘肃卫视
-http://175.155.100.72:85/tsfile/live/1040_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="西藏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/西藏卫视.png" group-title="四川联通",西藏卫视
-http://175.155.100.72:85/tsfile/live/1041_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="金鹰卡通" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/金鹰卡通.png" group-title="四川联通",金鹰卡通
-http://175.155.100.72:85/tsfile/live/1042_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="卡酷动画" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/卡酷动画.png" group-title="四川联通",卡酷动画
-http://175.155.100.72:85/tsfile/live/1043_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV影视文艺" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV影视文艺.png" group-title="四川联通",SCTV影视文艺
-http://175.155.100.72:85/tsfile/live/1005_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV新闻" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV新闻.png" group-title="四川联通",SCTV新闻
-http://175.155.100.72:85/tsfile/live/1044_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV妇女儿童" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV妇女儿童.png" group-title="四川联通",SCTV妇女儿童
-http://175.155.100.72:85/tsfile/live/1045_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV科教" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV科教.png" group-title="四川联通",SCTV科教
-http://175.155.100.72:85/tsfile/live/1046_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV公共乡村" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV公共乡村.png" group-title="四川联通",SCTV公共乡村
-http://175.155.100.72:85/tsfile/live/1047_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV康巴卫视" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV康巴卫视.png" group-title="四川联通",SCTV康巴卫视
-http://175.155.100.72:85/tsfile/live/1010_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV峨眉电影" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV峨眉电影.png" group-title="四川联通",SCTV峨眉电影
-http://175.155.100.72:85/tsfile/live/1048_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
-#EXTINF:-1 tvg-id="SCTV国际" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/SCTV国际.png" group-title="四川联通",SCTV国际
-http://175.155.100.72:85/tsfile/live/1049_1.m3u8?key=txiptv&amp;playlive=0&amp;authid=0
 #EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV1.png" group-title="山西联通",CCTV1
 http://183.191.30.67:9003/hls/1/index.m3u8
 #EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://gcore.jsdelivr.net/gh/kenye201/TVlog/img/CCTV2.png" group-title="山西联通",CCTV2
