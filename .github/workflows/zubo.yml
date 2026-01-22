@@ -30,7 +30,7 @@ jobs:
 
       - name: 2. 执行失效文件清理
         # 这里联动你的清理脚本，确保抓到的文件都是可用的
-        run: python py/cleanup_zubo.py
+        run: python py/merge_zubo.py
 
       - name: 3. 同步到仓库
         run: |
