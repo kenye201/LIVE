@@ -37,14 +37,17 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 检查目录是否存在，避免 git add 报错
-          if [ -d "hotel" ]; then
-            git add hotel/
-          fi
+          # 先拉取远程最新更改，使用 rebase 模式
+          git pull origin main --rebase
           
-          # 使用 git diff 判断是否有变化，避免空提交报错
-          if ! git diff --cached --exit-code; then
-            git commit -m "自动更新：酒店源更新与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
+          # 添加修改
+          git add hotel/hotel_history.txt
+          git add hotel/*.m3u
+          
+          # 检查是否有内容需要提交
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "自动更新：酒店源抓取与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
+            # 推送时如果还是失败，尝试重试循环或强制推送（Actions 环境通常建议 rebase）
             git push origin main
           else
             echo "无内容变更，跳过提交。"
