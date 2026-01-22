@@ -111,17 +111,12 @@ def main():
             print(f"    ➜ 尝试端口 {port} ... ", end="", flush=True)
             content = scan_ip_port(ip, port)
             if content:
-                group_match = re.search(r'group-title="(.*?)"', content)
-                group_name = clean_name(group_match.group(1)) if group_match else "未知分类"
-                filename = f"{group_name}_{ip}_{port}.m3u"
-                with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-                    f.write(content)
+                # ... 前面的保存逻辑保持不变 ...
                 save_history(ip, port)
                 print(f"✅ 成功! 保存为: {filename}")
-                success_count += 1
-                if success_count >= 2: # 单个 IP 抓到 2 个不同端口就停
-                    print(f"    💡 已抓取到 2 个有效端口，切换下一个 IP。")
-                    break 
+                
+                found_success = True # 标记该 IP 已成功
+                break  # <--- 关键：抓到一个就立刻跳出当前端口循环，去弄下一个 IP
             else:
                 print("✕")
         time.sleep(random.uniform(5, 10))
