@@ -1,21 +1,21 @@
-name: 组播源定时抓取
+name: 组播源自动同步
 
 on:
   schedule:
     - cron: '0 */6 * * *'  # 每 6 小时运行一次
-  workflow_dispatch:      # 允许手动点击按钮运行
+  workflow_dispatch:
 
 jobs:
-  build:
+  zubo_task:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # 必须有这个权限，才能把更新后的 history.txt 推送回仓库
+      contents: write
 
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 完整拉取记录，防止 push 冲突
+          fetch-depth: 0
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -25,22 +25,21 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-      - name: 执行抓取脚本
-        run: python py/zubo.py  # 请确保路径和文件名正确
+      - name: 执行组播脚本
+        run: python py/zubo.py
 
-      - name: 自动同步到仓库
+      - name: 同步记录到仓库
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 这一步很关键：不管 history.txt 是被删了、改了还是新增了，都一起处理
           git add zubo/history.txt
           git add zubo/*.m3u
           
-          # 只有当文件确实有变化时才提交，避免 workflow 报错
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "自动更新：IP记录与资源 [$(date +'%Y-%m-%d %H:%M:%S')]"
-            git push
+            git commit -m "自动更新：组播源记录 [$(date +'%Y-%m-%d %H:%M:%S')]"
+            git pull --rebase origin main
+            git push origin main
           else
-            echo "没有内容变化，跳过提交。"
+            echo "没有新内容，跳过提交。"
           fi
