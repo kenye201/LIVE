@@ -14,6 +14,7 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        
         with:
           fetch-depth: 0
 
@@ -27,6 +28,8 @@ jobs:
 
       - name: 执行组播脚本
         run: python py/zubo.py
+      - name: 执行组播脚本
+        run: py/merge_zubo.py      
 
       - name: 同步记录到仓库
         run: |
