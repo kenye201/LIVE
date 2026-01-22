@@ -3,7 +3,7 @@ name: 组播源定时抓取
 on:
   schedule:
     # 这里的 cron 表达式可以根据需要调整，目前设置为每 6 小时运行一次
-    - cron: '0 */6 * * *'
+    - cron: '0 */1 * * *'
   workflow_dispatch: # 允许手动触发
 
 jobs:
