@@ -37,20 +37,27 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 1. 先把本地的变化全部添加到暂存区
-          git add hotel/hotel_history.txt
-          git add hotel/*.m3u
+          # 1. 强制暂存所有改动
+          git add .
           
-          # 2. 检查是否有变化需要提交
+          # 2. 如果有变动，则处理冲突并推送
           if [ -n "$(git status --porcelain)" ]; then
-            # 3. 先在本地做一个 commit
-            git commit -m "自动更新：酒店源抓取与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
+            echo "检测到内容变更，开始同步..."
             
-            # 4. 关键：此时再拉取远程，并使用 rebase 策略
-            # 这会将你刚刚 commit 的内容接在远程最新版本后面
+            # 3. 将改动临时存入堆栈 (Stash)
+            git stash
+            
+            # 4. 拉取远程最新代码 (Rebase 模式)
             git pull origin main --rebase
             
-            # 5. 最后推送
+            # 5. 将改动还原回来
+            git stash pop
+            
+            # 6. 重新添加并提交
+            git add .
+            git commit -m "自动更新：酒店源抓取与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
+            
+            # 7. 推送
             git push origin main
           else
             echo "无内容变更，跳过提交。"
