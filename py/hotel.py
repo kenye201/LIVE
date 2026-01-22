@@ -7,11 +7,11 @@ import random
 from datetime import datetime
 
 # ======================
-# 深度配置区
+# 配置区
 # ======================
 HOME_URL = "https://iptv.cqshushu.com/"
 OUTPUT_DIR = "hotel"
-HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt") # 独立的酒店历史表
+HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
 MAX_IP_COUNT = 6  
 TIMEOUT = 12 
 
@@ -22,15 +22,10 @@ UA_LIST = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 ]
 
-# ======================
-# 核心逻辑：周一清理 & 记录管理
-# ======================
-
 def manage_hotel_history():
-    """周一删除 hotel_history.txt"""
-    if datetime.now().weekday() == 0: # 0是周一
+    if datetime.now().weekday() == 0: # 周一
         if os.path.exists(HISTORY_FILE):
-            print("📅 周一例行清理：删除旧的酒店 IP 记录表。")
+            print("📅 今天周一，清理旧的酒店 IP 记录表。")
             os.remove(HISTORY_FILE)
     
     history_ips = set()
@@ -45,12 +40,7 @@ def save_history(ip, port):
     with open(HISTORY_FILE, "a", encoding="utf-8") as f:
         f.write(f"{ip}:{port}\n")
 
-# ======================
-# 辅助函数
-# ======================
-
 def clean_name(name):
-    """提取 group-title 最后一节并去除非法字符"""
     if not name: return "未知分类"
     parts = name.split()
     last_part = parts[-1] if parts else name
@@ -78,76 +68,55 @@ def scan_ip_port(ip, port):
     except: pass
     return None
 
-# ======================
-# 主程序
-# ======================
-
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_hotel_history()
     
-    print(f"🚀 启动酒店源改进版抓取任务")
+    print(f"🚀 启动酒店源抓取任务 (目标: 前 {MAX_IP_COUNT} 个 IP)")
     
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
         ips = list(dict.fromkeys(re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)))
-        # 酒店源通常在首页前 MAX_IP_COUNT 个
         target_ips = [ip for ip in ips if not ip.startswith("127")][:MAX_IP_COUNT]
+        print(f"📍 首页获取到目标 IP: {target_ips}")
     except Exception as e:
         print(f"❌ 首页失败: {e}"); return
 
-    # 核心改进：对比历史 IP，直接跳过已抓过的
+    # 打印所有 IP 的状态
+    for ip in target_ips:
+        if ip in history_ips:
+            print(f" ⏩ IP {ip} 已在历史记录中，跳过探测。")
+    
     new_ips = [ip for ip in target_ips if ip not in history_ips]
     
     if not new_ips:
-        print("✅ 选定的 6 个酒店 IP 均已记录在案，跳过本次抓取。")
+        print("\n✅ 所有目标 IP 均已抓取过，本次无新任务。")
         return
 
-    print(f"🎯 待探测新酒店 IP: {new_ips}")
-
+    print(f"\n🎯 准备探测新酒店 IP: {new_ips}")
     fofa_blocked = False
     for idx, ip in enumerate(new_ips, 1):
-        print(f"\n[{idx}/{len(new_ips)}] 📡 探测新 IP: {ip}")
+        print(f"\n[{idx}/{len(new_ips)}] 📡 探测: {ip}")
+        f_ports = get_fofa_ports(ip)
+        test_ports = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports] if f_ports is not None else PRIMARY_PORTS
         
-        test_ports = []
-        if not fofa_blocked:
-            f_ports = get_fofa_ports(ip)
-            if f_ports is None:
-                fofa_blocked = True
-                test_ports = PRIMARY_PORTS
-            else:
-                test_ports = f_ports + [p for p in PRIMARY_PORTS if p not in f_ports]
-        else:
-            test_ports = PRIMARY_PORTS
-
         success_count = 0
         for port in test_ports:
             print(f"    ➜ 尝试端口 {port} ... ", end="", flush=True)
             content = scan_ip_port(ip, port)
-            
             if content:
-                # 提取分类命名
                 group_match = re.search(r'group-title="(.*?)"', content)
                 group_name = clean_name(group_match.group(1)) if group_match else "未知分类"
-                
                 filename = f"{group_name}_{ip}_{port}.m3u"
                 with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
                     f.write(content)
-                
                 save_history(ip, port)
                 print(f"✅ 成功! 保存为: {filename}")
-                
                 success_count += 1
-                # 设定：单个 IP 最多抓取 2 个端口源，防止冗余
-                if success_count >= 2:
-                    print(f"    💡 已获取该 IP 的 2 个端口，停止后续尝试。")
-                    break 
+                if success_count >= 2: break 
             else:
                 print("✕")
-        
         time.sleep(random.uniform(5, 10))
-
-    print("\n任务完成！")
 
 if __name__ == "__main__":
     main()
