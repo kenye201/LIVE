@@ -1,8 +1,7 @@
 name: 酒店源自动同步
-
 on:
   schedule:
-    - cron: '30 */6 * * *'
+    - cron: '43 * * * *'
   workflow_dispatch:
 
 jobs:
