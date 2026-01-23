@@ -25,8 +25,8 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-     # - name: 执行酒店源抓取
-     #   run: python py/hotel.py
+      - name: 执行酒店源抓取
+        run: python py/hotel.py
 
       - name: 执行失效文件清理
         # 联动清理脚本，确保仓库里不留下失效的 m3u
