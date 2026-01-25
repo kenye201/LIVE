@@ -71,7 +71,8 @@ def main():
     try:
         r = requests.get(HOME_URL, headers=get_headers(), timeout=TIMEOUT)
         # 这里用你最原始的正则逻辑
-        ips = list(dict.fromkeys(re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", r.text)))
+        # 建议将正则改得更“宽”一些，防止 HTML 标签干扰
+        ips = list(dict.fromkeys(re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", r.text)))
         target_ips = [ip for ip in ips if not ip.startswith("127")][-MAX_IP_COUNT:]
     except: return
 
