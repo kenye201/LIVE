@@ -25,24 +25,32 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-      - name: 1. 执行组播抓取
-        run: python py/zubo.py
-
-      - name: 2. 执行合并与清理
-        run: python py/merge_zubo.py
-
-      - name: 3. 同步到仓库
+      - name: 运行组播探测脚本
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          # 1. 强制清理环境
+          rm -f zubo/history.txt
+          rm -f zubo/*.m3u
           
-          # 关键点：不仅 add 历史，还要 add 所有新命名的 m3u
-          git add zubo/history.txt
-          git add zubo/*.m3u
+          # 2. 运行脚本
+          python py/zubo.py
           
-          # 如果你删除了旧文件，也要把删除动作记录下来
-          git add -u zubo/ 
+          # 3. 运行合并脚本
+          python py/merge_zubo.py
+
+      - name: 提交更新 (容错模式)
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Action"
           
+          # 使用 git add . 避免找不到文件的报错
+          git add zubo/ || true
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Manual debug run"
+            git push origin main
+          else
+            echo "没有产生新文件，可能是被反爬封锁了。"
+          fi
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "自动更新：同步运营商命名源 [$(date +'%Y-%m-%d %H:%M:%S')]"
             git pull --rebase origin main
