@@ -1,49 +1,36 @@
-name: 组播源自动同步
+name: IPTV Auto Update
 
 on:
   schedule:
-    - cron: '35 * * * *'  # 每 6 小时运行
-  workflow_dispatch:
+    - cron: '0 22 * * *' # 每天北京时间早晨6点运行
+  workflow_dispatch:      # 允许手动触发
 
 jobs:
-  zubo_task:
+  build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write    # 关键：赋予写入权限
 
     steps:
-      - name: 检出代码
+      - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: 设置 Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: 安装依赖
-        run: pip install requests
+      - name: Install Dependencies
+        run: |
+          pip install requests
 
-      - name: 1. 执行组播抓取
+      - name: Run Scraper
         run: python py/zubo.py
 
-      - name: 2. 执行失效文件清理
-        # 这里联动你的清理脚本，确保抓到的文件都是可用的
-        run: python py/merge_zubo.py
-
-      - name: 3. 同步到仓库
+      - name: Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
-          git add zubo/history.txt
           git add zubo/*.m3u
-          
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "自动更新：组播源同步与失效清理 [$(date +'%Y-%m-%d %H:%M:%S')]"
-            git pull --rebase origin main
-            git push origin main
-          else
-            echo "无变更，跳过提交。"
-          fi
+          # 只有在有变化时才提交
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update IPTV lists $(date +'%Y-%m-%d')" && git push)
