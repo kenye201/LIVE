@@ -28,13 +28,10 @@ jobs:
       - name: 1. 运行酒店探测
         run: python py/hotel.py
 
-      - name: 2. 运行失效清理
-        run: python py/hotelqingli.py
-
-      - name: 3. 运行文件合并
+      - name: 2. 运行文件合并
         run: python py/merge_m3u.py
 
-      - name: 4. 提交并推送
+      - name: 3. 提交并推送
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
