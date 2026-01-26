@@ -2,9 +2,8 @@ name: 每日仓库例行维护 (清理失效源)
 
 on:
   schedule:
-    # 每天凌晨 04:00 UTC (北京时间 12:00) 运行
     - cron: '0 4 * * *'
-  workflow_dispatch: # 支持手动触发
+  workflow_dispatch:
 
 jobs:
   maintenance:
@@ -26,26 +25,25 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-      - name: 1. 清理失效酒店源 (Hotel)
+      - name: 1. 清理酒店源
         run: python py/hotelqingli.py
 
-      - name: 2. 清理失效组播源 (Zubo)
+      - name: 2. 清理组播源
         run: python py/zubo_cleanup.py
 
-      - name: 4. 提交更改并推送
+      - name: 3. 提交并推送
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 关键修改：使用 -A 参数，它会记录文件的增加、修改以及【删除】
+          # 记录所有文件的删除操作
           git add -A
           
-          # 检查是否有变动（包括删除）
           if git diff --staged --quiet; then
-            echo "✅ 仓库已经是最新状态，无需清理。"
+            echo "✅ 检查完毕，没有发现失效源，无需变动。"
           else
-            git commit -m "🧹 每日维护：清理失效源并同步删除记录"
+            git commit -m "🧹 每日维护：同步删除失效的酒店源和组播源"
             git pull origin main --rebase
             git push origin main
-            echo "🚀 清理成功，文件已从仓库中移除。"
+            echo "🚀 清理成功，仓库已同步。"
           fi
