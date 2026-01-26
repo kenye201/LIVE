@@ -77,18 +77,48 @@ def main():
         log(f"❌ 找不到本地源码文件: {LOCAL_SOURCE}")
         return
 
-    # --- 1. 提取所有公网 IP ---
     try:
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             html_content = f.read()
-        all_ips = list(dict.fromkeys(re.findall(r"(?:\d{1,3}\.){3}\d{1,3}", html_content)))
-        public_ips = [ip for ip in all_ips if not ip.startswith(("127.", "192.", "10.", "172."))]
-    except Exception as e:
-        log(f"❌ 读取源码失败: {e}"); return
+        
+        # --- 核心改进：精准定位 Hotel IPTV 区域 ---
+        # 寻找包含 "Hotel IPTV" 的起始位置
+        hotel_start_key = "Hotel IPTV"
+        if hotel_start_key in html_content:
+            # 截取从 "Hotel IPTV" 开始到页面结束的内容
+            hotel_raw_area = html_content.split(hotel_start_key)[1]
+            
+            # 进一步精细化：如果后面还有其他 section（如组播源），则在那之前截断
+            # 假设下一个区域也带 group-section 类名
+            hotel_clean_area = hotel_raw_area.split('class="group-section"')[0]
+            log("🎯 已成功锁定 Hotel IPTV 专属区域")
+        else:
+            log("⚠️ 未在源码中定位到 'Hotel IPTV' 标记，切换到全局兜底模式")
+            hotel_clean_area = html_content
 
-    # --- 2. 选取最后 6 个不在黑名单中的 IP ---
+        # 从锁定区域中提取 IP
+        # 匹配标准 IP 格式
+        found_ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", hotel_clean_area)
+        
+        # 去重并过滤内网 IP
+        public_ips = []
+        seen = set()
+        for ip in found_ips:
+            if ip not in seen and not ip.startswith(("127.", "192.", "10.", "172.")):
+                public_ips.append(ip)
+                seen.add(ip)
+        
+        if not public_ips:
+            log("❌ 在酒店源区域内未发现任何有效 IP。")
+            return
+
+        log(f"🔎 酒店区域识别到 {len(public_ips)} 个独立 IP")
+    except Exception as e:
+        log(f"❌ 解析源码失败: {e}"); return
+
+    # --- 选取前 6 个不在黑名单中的 IP ---
     new_ips_to_scan = []
-    for ip in public_ips[::-1]: # 从最新录入的 IP 开始
+    for ip in public_ips: 
         if ip in history_ips:
             continue
         new_ips_to_scan.append(ip)
@@ -96,8 +126,15 @@ def main():
             break
 
     if not new_ips_to_scan:
-        log("✅ 所有候选 IP 均已在黑名单中。")
+        log("✅ 酒店区域内的 IP 均已在黑名单中，无需重复探测。")
         return
+
+    log(f"🚀 开始顺序探测前 {len(new_ips_to_scan)} 个酒店 IP: {new_ips_to_scan}")
+
+    # ... 下接 scan_ip_port 探测循环 ...
+    for idx, ip in enumerate(new_ips_to_scan, 1):
+        log(f"\n[{idx}/{len(new_ips_to_scan)}] 📡 探测 IP: {ip}")
+        # (后续探测逻辑保持不变)
 
     log(f"🚀 开始字典探测 {len(new_ips_to_scan)} 个酒店源 IP")
 
