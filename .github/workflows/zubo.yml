@@ -1,4 +1,4 @@
-name: IPTV 组播自动抓取与整合
+name: 组播自动抓取与整合
 
 on:
   schedule:
