@@ -1,21 +1,22 @@
 import os
 import re
 import requests
-import concurrent.futures
+import time
+import sys
 
 # ===============================
 # 配置区
 # ===============================
 M3U_DIR = "hotel"
 HISTORY_FILE = os.path.join(M3U_DIR, "hotel_history.txt")
-SAMPLE_COUNT = 3               # 抽测 3 个链接即可，提高效率
+SAMPLE_COUNT = 3
 CHECK_TIMEOUT = 10
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 def check_link(url):
     """检测单个直播源链接"""
     try:
-        # 优先使用 GET 请求读取极小字节，比 HEAD 更准确（很多直播源屏蔽 HEAD）
+        # stream=True 配合实时读取少量字节，判断是否真正有流
         response = requests.get(url, headers=HEADERS, timeout=CHECK_TIMEOUT, stream=True)
         return response.status_code == 200
     except:
@@ -29,36 +30,46 @@ def is_m3u_alive(file_path):
         links = re.findall(r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', content)
         if not links: return False
         
-        test_links = links[:SAMPLE_COUNT]
-        with concurrent.futures.ThreadPoolExecutor(max_workers=SAMPLE_COUNT) as executor:
-            results = list(executor.map(check_link, test_links))
-        return any(results)
+        # 顺序抽测，只要有一个通了就返回 True
+        for link in links[:SAMPLE_COUNT]:
+            if check_link(link):
+                return True
+        return False
     except:
         return False
 
 def main():
-    if not os.path.exists(M3U_DIR): return
+    if not os.path.exists(M3U_DIR):
+        print(f"❌ 目录 {M3U_DIR} 不存在")
+        return
 
-    print(f"🔍 开始清理失效文件...")
+    print(f"🔍 开始清理酒店源 (目录: {M3U_DIR})...")
     files = [f for f in os.listdir(M3U_DIR) if f.endswith(".m3u")]
     
     removed_ips = []
     removed_count = 0
 
     for filename in files:
+        # 实时打印正在处理的文件名，不换行
+        sys.stdout.write(f"📡 正在检测: {filename} ... ")
+        sys.stdout.flush()
+
         file_path = os.path.join(M3U_DIR, filename)
         if not is_m3u_alive(file_path):
-            # 提取 IP 用于后续清理黑名单 (假设文件名格式为: 运营商_1_2_3_4_端口.m3u)
+            # 提取 IP
             parts = filename.split('_')
             if len(parts) >= 5:
-                ip = ".".join(parts[-5:-1]) # 提取 1_2_3_4 还原为 1.2.3.4
+                ip = ".".join(parts[-5:-1])
                 removed_ips.append(ip)
             
             os.remove(file_path)
-            print(f"  ❌ 已删除: {filename}")
+            sys.stdout.write("❌ 失效 (已删除)\n")
             removed_count += 1
         else:
-            print(f"  ✅ 有效: {filename}")
+            sys.stdout.write("✅ 有效\n")
+        sys.stdout.flush()
+        # 稍微停顿一下，防止请求过快
+        time.sleep(0.5)
 
     # --- 同步清理黑名单 ---
     if removed_ips and os.path.exists(HISTORY_FILE):
@@ -70,7 +81,7 @@ def main():
                     f.write(line)
         print(f"♻️  同步清理黑名单记录: {len(removed_ips)} 条")
 
-    print(f"✨ 清理完成！共删除 {removed_count} 个失效文件。")
+    print(f"\n✨ 清理完成！共删除 {removed_count} 个失效文件。")
 
 if __name__ == "__main__":
     main()
