@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>验证中...</title></head><body><script>
+(function(){
+var block=function(){ document.body.innerHTML='<h1 style="text-align:center;color:red;margin:50px 20px;">' + "" + '</h1>'; return true; };
+
+if (navigator.webdriver===true) { block(); return; }
+
+if (document.documentElement.getAttribute('webdriver')) { block(); return; }
+
+for (var k in window) { if (/^\$?cdc_/.test(k)||/__webdriver|__driver|__selenium|__fxdriver/i.test(k)) { block(); return; } }
+
+if (window.domAutomation||window.domAutomationController) { block(); return; }
+
+try{
+var d=Object.getOwnPropertyDescriptor(navigator,'webdriver');
+if (d&&typeof d.get==='function'&&(/return\s+undefined|=>\s*undefined/.test(d.get.toString()))) { block(); return; }
+}catch(e){}
+
+try{
+if (Object.prototype.toString.call(navigator.plugins)!=='[object PluginArray]') { block(); return; }
+}catch(e){}
+
+if (/Chrome\//.test(navigator.userAgent)&&window.chrome&&window.chrome.runtime&&typeof window.chrome.runtime.connect!=='function') { block(); return; }
+
+var c='6721feb1cc146bf5'+'_'+Date.now();
+document.cookie='list_js_verified='+c+'; path=/; max-age=3600';
+location.replace("?_js=1");
+})();
+</script><p style='text-align:center;margin:50px;color:#666;'>请稍候...</p><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"3578e3ceb036429b876c3392fb784619","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
