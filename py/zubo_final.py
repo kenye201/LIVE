@@ -14,13 +14,12 @@ LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "zubo"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "history.txt")
 MAX_IP_COUNT = 6
-TIMEOUT = 15 # 增加超时容忍度
+TIMEOUT = 15 
 
 # 你的常用端口字典
 PRIMARY_PORTS = [
-    6636, 16888, 5002, 3333, 8188, 8055, 8288, 8880, 5555, 55555, 58888, 7000, 7700, 6003, 9988, 9999, 8012, 10000, 8888, 4022, 8188, 8022, 7777, 5146, 5140, 4056, 12320, 
-    10000, 8080, 8000, 9901, 8090, 8181, 1234, 4000, 4001, 5148, 12345, 8805, 8187, 9926, 8222, 8808, 8883, 8686, 8188, 4023, 8848, 6666, 
-    9000, 9001, 888, 9003, 8082, 20443, 85, 8081, 8001, 8003, 6001, 8899
+    4022, 8188, 6636, 16888, 5002, 3333, 8055, 8288, 8880, 5555, 7000, 8012, 10000, 
+    8888, 8022, 7777, 9000, 8080, 8000, 1234, 4000, 4001, 8899
 ]
 
 UA_LIST = [
@@ -47,7 +46,7 @@ def scan_ip_port(ip, port):
     sys.stdout.flush()
 
     try:
-        # 慢速探测：每个端口请求前强制随机停顿 1-2 秒
+        # 慢速探测：每个端口请求前强制随机停顿 1.2-2.5 秒
         time.sleep(random.uniform(1.2, 2.5))
         
         res = requests.get(url, headers=get_headers(), timeout=TIMEOUT)
@@ -83,25 +82,26 @@ def main():
         public_ips = [ip for ip in all_ips if not ip.startswith(("127.", "192.", "10.", "172."))]
         
         if not public_ips:
-            log("⚠️ 源码中未发现任何公网 IP，请检查 HTML 文件内容。")
+            log("⚠️ 源码中未发现任何公网 IP。")
             return
 
-        # 2. 尝试寻找 IP 紧跟着的端口 (兼容 :4022 或 s=IP:PORT)
+        # 2. 尝试寻找 IP 紧跟着的端口
         found_data = {}
         for ip in public_ips:
-            # 搜索 IP 后面跟着的 :数字
+            # 搜索 IP 后面跟着的端口 (兼容 :4022 或 s=IP:PORT 等各种格式)
             port_match = re.search(rf"{re.escape(ip)}[:&s=]*(\d+)", html)
             if port_match:
                 found_data[ip] = int(port_match.group(1))
             else:
-                found_data[ip] = 4022 # 默认保底端口
+                found_data[ip] = 4022 # 默认保底
 
-        # 3. 按照你的要求：取最后 6 个
         target_ips = list(found_data.keys())[-MAX_IP_COUNT:]
         log(f"📊 提取到 {len(target_ips)} 个目标 IP")
 
-        # ... 后续循环逻辑不变 ...
-            # 构建测试字典：[原始端口] + [常用端口字典]
+        for ip in target_ips:
+            log(f"🌟 开始处理 IP: {ip}")
+            
+            # 构建测试字典：[网页原始端口] + [常用端口字典]
             original_port = found_data[ip]
             test_ports = [original_port] + [p for p in PRIMARY_PORTS if p != original_port]
             
@@ -122,12 +122,12 @@ def main():
                     
                     log(f"🎉 任务完成: {filename}")
                     success = True
-                    break # 该 IP 成功，跳过剩余端口
+                    break 
             
             if not success:
                 log(f"❌ IP {ip} 所有端口均未响应。")
             
-            # 每个 IP 处理完后大休整，保护 GitHub IP 不被封
+            # 每个 IP 处理完后休息
             time.sleep(5)
 
     except Exception as e:
