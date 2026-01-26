@@ -1,7 +1,8 @@
 name: 组播源自动同步
 
 on:
-
+  schedule:
+    - cron: "33 * * * *"  # 每 15分钟
   workflow_dispatch:
 
 jobs:
