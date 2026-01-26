@@ -27,14 +27,20 @@ jobs:
           playwright install chromium --with-deps # 安装浏览器内核及系统底层依赖
 
       - name: 执行抓取脚本
-        run: |
-          # 确保路径正确，如果你的脚本在 py 文件夹下
-          python py/zubo.py 
+        run: python py/zubo.py 
+
+      # 新增：上传调试截图和源码，方便你下载查看
+      - name: 上传调试数据
+        uses: actions/upload-artifact@v4
+        if: always() # 无论成功失败都上传
+        with:
+          name: debug-files
+          path: debug/
 
       - name: 提交结果
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "自动更新数据" || exit 0
+          git commit -m "Update source: $(date)" || exit 0
           git push
