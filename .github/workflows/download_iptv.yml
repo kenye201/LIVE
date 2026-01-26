@@ -1,10 +1,13 @@
-name: Scan IPTV Ports from Local HTML
+name: Hourly IPTV Scan
 
 on:
+  schedule:
+    # 每小时运行一次 (UTC 时间 05 分，对应北京时间每小时的 05 分)
+    - cron: '5 * * * *'
   push:
     paths:
-      - 'data/shushu_home.html' # 只有月球宿主更新了这个文件，才触发
-  workflow_dispatch:           # 允许手动触发
+      - 'data/shushu_home.html' # 保留监听，双重保险
+  workflow_dispatch:           # 允许手动运行
 
 jobs:
   build:
@@ -15,8 +18,6 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 获取完整历史以方便推送
 
       - name: 设置 Python
         uses: actions/setup-python@v5
@@ -27,12 +28,16 @@ jobs:
         run: pip install requests
 
       - name: 运行扫描脚本
+        # 增加 PYTHONUNBUFFERED=1 确保输出不进入缓冲区，实现真·实时显示
+        env:
+          PYTHONUNBUFFERED: 1
         run: python py/zubo_final.py
 
-      - name: 提交扫描结果
+      - name: 提交并推送
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Action"
+          git pull origin main --rebase
           git add zubo/*
-          git commit -m "自动更新组播列表: $(date)" || exit 0
+          git commit -m "Hourly Update: $(date)" || exit 0
           git push origin main
