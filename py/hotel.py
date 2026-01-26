@@ -13,11 +13,11 @@ from datetime import datetime
 LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 8    # 提取 IP 成功了，我们可以稍微多看几个
+MAX_IP_COUNT = 5    # 提取 IP 成功了，我们可以稍微多看几个
 TIMEOUT = 15        # 增加超时等待
 
 # 酒店高频端口字典
-PRIMARY_PORTS = [8000, 8080, 9901, 8082, 8888, 9001, 8001, 8090, 9999, 888, 9003, 8081, 50001]
+PRIMARY_PORTS = [8082, 9901, 888, 9001, 9003, 9888, 8080, 8000, 9999, 8888, 8090, 8081, 8181, 8899, 8001, 85, 808, 50001, 20443]
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
