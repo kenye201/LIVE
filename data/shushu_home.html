@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        
+    <!-- 基础 Meta 标签 -->
+    <title>IPTV神器Pro - 每日更新最新酒店源、组播源IP、节目列表</title>
+    <meta name="description" content="每日更新最新的酒店IPTV源、组播源IP地址和节目列表，提供免费IPTV直播源，支持M3U和TXT格式下载，实时更新，稳定可靠。">
+    <meta name="keywords" content="IPTV,直播源,酒店源,组播源,IPTV源,免费IPTV,M3U,TXT,节目列表,直播地址">
+    <meta name="author" content="cqshushu">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="language" content="zh-CN">
+    <meta name="revisit-after" content="1 days">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://iptv.cqshushu.com/index.php?_js=1">
+    
+    <!-- Sitemap 引用 -->
+    <link rel="sitemap" type="application/xml" href="https://iptv.cqshushu.com/index.php/sitemap.xml">
+    
+    <!-- Open Graph 标签（社交媒体分享） -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IPTV神器Pro - 每日更新最新酒店源、组播源IP、节目列表">
+    <meta property="og:description" content="每日更新最新的酒店IPTV源、组播源IP地址和节目列表，提供免费IPTV直播源，支持M3U和TXT格式下载，实时更新，稳定可靠。">
+    <meta property="og:url" content="http://iptv.cqshushu.com/index.php?_js=1">
+    <meta property="og:site_name" content="IPTV神器Pro">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="http://iptv.cqshushu.com/index.php/logo.png">
+    
+    <!-- Twitter Card 标签 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IPTV神器Pro - 每日更新最新酒店源、组播源IP、节目列表">
+    <meta name="twitter:description" content="每日更新最新的酒店IPTV源、组播源IP地址和节目列表，提供免费IPTV直播源，支持M3U和TXT格式下载，实时更新，稳定可靠。">
+    <meta name="twitter:image" content="http://iptv.cqshushu.com/index.php/logo.png">
+    
+    <!-- 移动端优化 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="IPTV神器Pro">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- 结构化数据（JSON-LD） -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","name":"IPTV神器Pro","description":"每日更新最新的酒店IPTV源、组播源IP地址和节目列表","url":"http://iptv.cqshushu.com/index.php?_js=1"}    </script>
+    
+    <!-- 面包屑结构化数据 -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"🏠首页","item":"http://iptv.cqshushu.com/?"},{"@type":"ListItem","position":2,"name":"📺IPTV解析","item":"http://iptv.cqshushu.com/iptv_channel.php"},{"@type":"ListItem","position":3,"name":"🔄TXT/M3U互转","item":"http://iptv.cqshushu.com/txt2m3u.php"},{"@type":"ListItem","position":4,"name":"▶️​IPTV接口","item":"http://iptv.cqshushu.com/jiekou.php"}]}    </script>
+    
+    <link rel="stylesheet" href="css/iptv.css">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    
+        <script>
+        window.KEY_SEED_TOKEN = 'OkJIgGyGOUTH47epGtJPnQGwtyrnyWidJdpvsYfCR8o=';
+    </script>
+    
+    <script src="js/ancr.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header" role="banner">
+            <h1><a href="?" style="color: #61ABF5; text-decoration: none;">📺 IPTV神器Pro</a></h1>
+           <!-- Bidvertiser2102518 -->
+        </header>
+        
+        <!-- 面包屑导航 -->
+        <nav aria-label="面包屑导航" style="margin: 15px 0; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+            <ol style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; align-items: center;">
+                                    <li style="display: inline-flex; align-items: center;">
+                                                                            <!-- 首页时所有项都是链接，其他页面时最后一项不是链接 -->
+                            <a href="?" style="color: #007bff; text-decoration: none; padding: 4px 8px; border-radius: 3px; transition: background 0.2s;" onmouseover="this.style.background='#e7f3ff'" onmouseout="this.style.background='transparent'">🏠首页</a>
+                                            </li>
+                                    <li style="display: inline-flex; align-items: center;">
+                                                    <span style="margin: 0 8px; color: #999;">›</span>
+                                                                            <!-- 首页时所有项都是链接，其他页面时最后一项不是链接 -->
+                            <a href="iptv_channel.php" style="color: #007bff; text-decoration: none; padding: 4px 8px; border-radius: 3px; transition: background 0.2s;" onmouseover="this.style.background='#e7f3ff'" onmouseout="this.style.background='transparent'">📺IPTV解析</a>
+                                            </li>
+                                    <li style="display: inline-flex; align-items: center;">
+                                                    <span style="margin: 0 8px; color: #999;">›</span>
+                                                                            <!-- 首页时所有项都是链接，其他页面时最后一项不是链接 -->
+                            <a href="txt2m3u.php" style="color: #007bff; text-decoration: none; padding: 4px 8px; border-radius: 3px; transition: background 0.2s;" onmouseover="this.style.background='#e7f3ff'" onmouseout="this.style.background='transparent'">🔄TXT/M3U互转</a>
+                                            </li>
+                                    <li style="display: inline-flex; align-items: center;">
+                                                    <span style="margin: 0 8px; color: #999;">›</span>
+                                                                            <!-- 首页时所有项都是链接，其他页面时最后一项不是链接 -->
+                            <a href="jiekou.php" style="color: #007bff; text-decoration: none; padding: 4px 8px; border-radius: 3px; transition: background 0.2s;" onmouseover="this.style.background='#e7f3ff'" onmouseout="this.style.background='transparent'">▶️​IPTV接口</a>
+                                            </li>
+                            </ol>
+        </nav>
+
+                    <!-- 首页 -->
+                        
+                        <!-- 搜索框 -->
+            <div class="search-section" style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <form method="get" id="searchForm" style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                    <input type="hidden" name="token" value="1320dc265b42585da9298a1eadb946d9">
+                    <input type="text" 
+                           name="q" 
+                           id="searchInput"
+                           value="" 
+                           placeholder="搜索关键字..." 
+                           style="flex: 1; min-width: 200px; padding: 10px 15px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px;">
+                    <button type="submit" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; white-space: nowrap;">
+                        🔍 搜索
+                    </button>
+                                    </form>
+                            </div>
+                        
+            <form class="controls" method="get" id="filterForm">
+                <input type="hidden" name="token" value="1320dc265b42585da9298a1eadb946d9">
+                                <label>类型:</label>
+                <select name="t" id="typeSelect" class="paer-filter-select">
+                    <option value="all" selected>全部</option>
+                    <option value="hotel">酒店</option>
+                    <option value="multicast">组播</option>
+                    <option value="other">其他</option>
+                </select>
+
+                <label>区域:</label>
+                <select name="province" id="provinceSelect" class="paer-filter-select">
+                                            <option value="all" selected>全部</option>
+                                            <option value="vn">越南</option>
+                                            <option value="hb">湖北</option>
+                                            <option value="nm">内蒙古</option>
+                                            <option value="cq">重庆</option>
+                                            <option value="sc">四川</option>
+                                            <option value="bj">北京</option>
+                                            <option value="sd">山东</option>
+                                            <option value="gd">广东</option>
+                                            <option value="js">江苏</option>
+                                            <option value="sh">上海</option>
+                                            <option value="he">河北</option>
+                                            <option value="tj">天津</option>
+                                            <option value="ah">安徽</option>
+                                            <option value="sn">陕西</option>
+                                            <option value="ha">河南</option>
+                                            <option value="jl">吉林</option>
+                                            <option value="zj">浙江</option>
+                                            <option value="hi">海南</option>
+                                            <option value="hl">黑龙江</option>
+                                            <option value="ru">俄罗斯</option>
+                                            <option value="yn">云南</option>
+                                            <option value="fj">福建</option>
+                                            <option value="kr">韩国</option>
+                                            <option value="sx">山西</option>
+                                            <option value="hn">湖南</option>
+                                            <option value="gz">贵州</option>
+                                            <option value="tw">台湾</option>
+                                            <option value="gx">广西</option>
+                                            <option value="qh">青海</option>
+                                            <option value="ln">辽宁</option>
+                                            <option value="xj">新疆</option>
+                                            <option value="jx">江西</option>
+                                            <option value="nx">宁夏</option>
+                                            <option value="gs">甘肃</option>
+                                    </select>
+
+                <label>数量:</label>
+                <select name="limit" id="limitSelect" class="paer-filter-select">
+                                            <option value="3">3</option>
+                                            <option value="6" selected>6</option>
+                                            <option value="10">10</option>
+                                    </select>
+
+                <button type="submit" class="btn" id="filterSubmitBtn" style="padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">🔄 筛选</button>
+                <span style="margin-left: 15px; color: #666;">
+                    全部 - 每组显示 6 个IP
+                </span>
+                <!-- 暗黑模式切换按钮 -->
+                <button id="dark-mode-toggle" 
+                    title="切换主题"
+                    style="
+                        position: fixed;
+                        top: 15px;
+                        right: 15px;
+                        width: 48px;
+                        height: 48px;
+                        background: white;
+                        border: 2px solid #ddd;
+                        border-radius: 50%;
+                        font-size: 1.4em;
+                        cursor: pointer;
+                        z-index: 1000;
+                        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.3s ease;
+                        touch-action: manipulation;
+                    ">
+                    🌙
+                </button>
+
+            </form>
+
+            <!-- 统计信息 -->
+            <!--div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span>总IP数量</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span>酒店</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span>组播</span>
+                </div>
+            </div-->
+
+            <div class="ad-container" style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 1px solid #dee2e6;"><div class="ad-label" style="font-size: 12px; color: #999; margin-bottom: 10px; text-align: center;">📢 广告</div><script type='text/javascript' src='//pl28071922.effectivegatecpm.com/86/e5/55/86e555af44dab712030790823552c4b9.js'></script>
+
+<div id="ntv_2102606"></div>
+<script type="text/javascript">
+(function(d) {
+	var params =
+	{
+		bvwidgetid: "ntv_2102606",
+		bvlinksownid: 2102606,
+		rows: 1,
+		cols: 2,
+		textpos: "left",
+		imagewidth: 150,
+		mobilecols: 1,
+		cb: (new Date()).getTime()
+	};
+	params.bvwidgetid = "ntv_2102606" + params.cb;
+	d.getElementById("ntv_2102606").id = params.bvwidgetid;
+	var qs = Object.keys(params).reduce(function(a, k){ a.push(k + '=' + encodeURIComponent(params[k])); return a},[]).join(String.fromCharCode(38));
+	var s = d.createElement('script'); s.type='text/javascript';s.async=true;
+	var p = 'https:' == document.location.protocol ? 'https' : 'http';
+	s.src = p + "://cdn.hyperpromote.com/bidvertiser/tags/active/bdvws.js?" + qs;
+	d.getElementById(params.bvwidgetid).appendChild(s);
+})(document);
+</script></div>            <!-- Hotel IPTV 表格 -->
+                        <section class="group-section" aria-label="酒店IPTV源列表">
+                <h2 class="group-header hotel">🏨 Hotel IPTV 
+                                            (共 463 个，当前第 1 页)
+                                    </h2>
+                <div style="padding: 20px;">
+                    <table class="iptv-table">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>节目数</th>
+                                <th>类型</th>
+                                <th>上线时间</th>
+                                <th>更新时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTc1LjExLjc0LjI0OQ==', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            175.11.74.249                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">71</strong></td>
+                                    <td data-label="类型:">湖南省长沙市望城区酒店 湖南电信</td>
+                                    <td data-label="上线时间:">2026-01-26 05:44</td>
+                                    <td data-label="更新时间:">2026-01-26 12:32:51</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTc1LjExLjczLjIzMA==', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            175.11.73.230                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">71</strong></td>
+                                    <td data-label="类型:">湖南省长沙市望城区酒店 湖南电信</td>
+                                    <td data-label="上线时间:">2026-01-26 05:44</td>
+                                    <td data-label="更新时间:">2026-01-26 12:27:00</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MjIwLjE2OC43OC4yMTg=', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            220.168.78.218                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">24</strong></td>
+                                    <td data-label="类型:">湖南省长沙市开福区酒店 湖南电信</td>
+                                    <td data-label="上线时间:">2026-01-26 05:43</td>
+                                    <td data-label="更新时间:">2026-01-26 12:21:15</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTgyLjEyMi4yMzEuMzM=', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            182.122.231.33                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">32</strong></td>
+                                    <td data-label="类型:">河南省洛阳市涧西区酒店 河南联通</td>
+                                    <td data-label="上线时间:">2026-01-26 05:43</td>
+                                    <td data-label="更新时间:">2026-01-26 11:34:48</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MS4xOTcuMjUyLjEwOQ==', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            1.197.252.109                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">46</strong></td>
+                                    <td data-label="类型:">河南省漯河市召陵区酒店 河南电信</td>
+                                    <td data-label="上线时间:">2026-01-26 05:42</td>
+                                    <td data-label="更新时间:">2026-01-26 12:22:03</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTIzLjEyLjE4Ny45Ng==', 'hotel')"
+                                           class="ip-link" title="查看详细信息">
+                                            123.12.187.96                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">51</strong></td>
+                                    <td data-label="类型:">河南省周口市郸城县酒店 河南联通</td>
+                                    <td data-label="上线时间:">2026-01-26 05:41</td>
+                                    <td data-label="更新时间:">2026-01-26 12:23:25</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                    </tbody>
+                    </table>
+                    
+                                            <!-- 首页酒店IP分页 -->
+                        <div class="pagination-container" style="margin-top: 20px;">
+                            <div class="pagination-info">
+                                <span class="pagination-text">共 463 个结果，第 1 页，共 78 页</span>
+                            </div>
+                            <div class="pagination-buttons">
+                                                                                                                                                                    <a href="?t=all&province=all&limit=6&multicast_page=1&hotel_page=1" class="pagination-btn active">1</a>
+                                                                    <a href="?t=all&province=all&limit=6&multicast_page=1&hotel_page=2" class="pagination-btn ">2</a>
+                                                                    <a href="?t=all&province=all&limit=6&multicast_page=1&hotel_page=3" class="pagination-btn ">3</a>
+                                                                                                    <a href="?t=all&province=all&limit=6&multicast_page=1&hotel_page=2" class="pagination-btn">下一页</a>
+                                                                                                    <a href="?t=all&province=all&limit=6&multicast_page=1&hotel_page=78" class="pagination-btn">末页</a>
+                                                            </div>
+                        </div>
+                                    </div>
+            </section>
+            
+            <!-- Multicast IP 表格 -->
+                        <section class="group-section" aria-label="组播源列表">
+                <h2 class="group-header multicast">📡 Multicast IP 
+                                            (共 1041 个，当前第 1 页)
+                                    </h2>
+                <div style="padding: 20px;">
+                    <table class="iptv-table">
+                        <thead>
+                            <tr>
+                                <th>IP</th>
+                                <th>节目数</th>
+                                <th>类型</th>
+                                <th>上线时间</th>
+                                <th>更新时间</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MzYuMjIuMjQxLjY3', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            36.22.241.67                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">199</strong></td>
+                                    <td data-label="类型:">浙江省杭州市余杭区组播 浙江电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:40</td>
+                                    <td data-label="更新时间:">2026-01-26 12:40:40</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTI1LjkyLjE0MC45NA==', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            125.92.140.94                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">374</strong></td>
+                                    <td data-label="类型:">广东省中山市组播 广东电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:39</td>
+                                    <td data-label="更新时间:">2026-01-26 12:48:01</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTA2LjgzLjExNC4yNDc=', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            106.83.114.247                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">340</strong></td>
+                                    <td data-label="类型:">重庆市九龙坡区组播 重庆电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:39</td>
+                                    <td data-label="更新时间:">2026-01-26 12:29:40</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTEwLjE3OC4xNDUuMTg2', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            110.178.145.186                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">119</strong></td>
+                                    <td data-label="类型:">山西省太原市晋源区组播 山西电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:37</td>
+                                    <td data-label="更新时间:">2026-01-26 12:17:42</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTExLjE3OS4xOTYuMTQy', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            111.179.196.142                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">207</strong></td>
+                                    <td data-label="类型:">湖北省黄冈市罗田县组播 湖北电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:37</td>
+                                    <td data-label="更新时间:">2026-01-26 12:11:26</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td data-label="IP:">
+                                        <a href="javascript:void(0)" 
+                                           onclick="gotoIP('MTIxLjIzMy4yNDkuOTk=', 'multicast')"
+                                           class="ip-link" title="查看详细信息">
+                                            121.233.249.99                                        </a>
+                                    </td>
+                                    <td data-label="节目数:"><strong style="color: #28a745;">276</strong></td>
+                                    <td data-label="类型:">江苏省扬州市邗江区组播 江苏电信</td>
+                                    <td data-label="上线时间:">2026-01-26 06:36</td>
+                                    <td data-label="更新时间:">2026-01-26 12:14:36</td>
+                                    <td data-label="状态:">
+                                        <span class="status-badge status-new">新上线</span>
+                                    </td>
+                                </tr>
+                                                    </tbody>
+                    </table>
+                    
+                                            <!-- 首页组播IP分页 -->
+                        <div class="pagination-container" style="margin-top: 20px;">
+                            <div class="pagination-info">
+                                <span class="pagination-text">共 1041 个结果，第 1 页，共 174 页</span>
+                            </div>
+                            <div class="pagination-buttons">
+                                                                                                                                                                    <a href="?t=all&province=all&limit=6&hotel_page=1&multicast_page=1" class="pagination-btn active">1</a>
+                                                                    <a href="?t=all&province=all&limit=6&hotel_page=1&multicast_page=2" class="pagination-btn ">2</a>
+                                                                    <a href="?t=all&province=all&limit=6&hotel_page=1&multicast_page=3" class="pagination-btn ">3</a>
+                                                                                                    <a href="?t=all&province=all&limit=6&hotel_page=1&multicast_page=2" class="pagination-btn">下一页</a>
+                                                                                                    <a href="?t=all&province=all&limit=6&hotel_page=1&multicast_page=174" class="pagination-btn">末页</a>
+                                                            </div>
+                        </div>
+                                    </div>
+            </section>
+                        
+
+
+            </div>
+
+    <!-- ==================== Footer ==================== -->
+
+<!-- ==================== Footer ==================== -->
+    <footer class="page-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-line">
+                <span class="footer-link-icon">🔗</span>
+                <span class="footer-text">点击IP端口可查看详细信息 | 数据来源:网络 | 每日更新最新酒店源、组播源IP、节目列表</span>
+                <a href="#" class="footer-btn" aria-label="IPTV Pro">IPTV Pro</a>
+            </div>
+
+            <!-- 📅 今日上线 IP 统计 -->
+            <div class="footer-line">
+                <span class="footer-text">
+                    今日更新：酒店IP 36 个 | 组播IP 143 个
+                </span>
+            </div>
+
+    
+            <!-- 🔢 今日调用统计 -->
+            <div class="footer-line">
+                                <span class="footer-text">
+                    今日API调用次数: 总：14,914 | IP详情：726 | 列表：14,184 | 阿爬：4                </span>
+            </div>
+    
+            <!-- 🔢 累计总调用统计 -->
+            <div class="footer-line">
+                                <span class="footer-text">
+                    总计API调用次数:  总：897,229 | IP详情：114,985 | 列表：360,608 | 阿爬：1,549                </span>
+            </div>
+            <div class="footer-line">
+                <span class="footer-bulb-icon">💡</span>
+                <span class="footer-text">by cqshushu | 公众号 医工学习日志 | 提供免费IPTV直播源、酒店源、组播源</span>
+                <a href="http://blog.cqshushu.com" target="_blank" class="footer-btn" rel="nofollow noopener" aria-label="访问博客">博客</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== Modal Placeholder ==================== -->
+    <div id="modal-wrapper">
+        <div id="modal-box">
+            <button id="modal-close" title="關閉">✕</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+   <script>
+       window.addEventListener('scroll', () => {
+           document.getElementById('back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+       });
+   </script>
+
+    <script src="js/cryptomini.js"></script>
+    <script src="js/iptv.js"></script>
+    <script src="js/pae.js"></script>
+    <script src="js/pabe5.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btns = document.querySelectorAll('#dark-mode-toggle');
+            const body = document.body;
+
+            const init = () => {
+                const isDark = localStorage.getItem('dark-mode') === 'true';
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                }
+                // 更新所有按钮图标
+                btns.forEach(btn => {
+                    btn.textContent = isDark ? '☀️' : '🌙';
+                });
+            };
+
+            const toggle = () => {
+                const isDark = body.classList.toggle('dark-mode');
+                localStorage.setItem('dark-mode', isDark);
+                // 更新所有按钮图标
+                btns.forEach(btn => {
+                    btn.textContent = isDark ? '☀️' : '🌙';
+                });
+            };
+
+            // 为所有按钮绑定事件
+            btns.forEach(btn => {
+                btn.addEventListener('click', toggle);
+                btn.addEventListener('touchstart', e => {
+                    e.preventDefault();
+                    toggle();
+                });
+            });
+
+            init();
+        });
+        
+        
+    </script>
+</body>
+</html>
