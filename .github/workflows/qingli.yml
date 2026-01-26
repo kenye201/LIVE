@@ -25,13 +25,10 @@ jobs:
       - name: 安装依赖
         run: pip install requests
 
-      - name: 1. 清理酒店源
-        run: python py/hotelqingli.py
-
-      - name: 2. 清理组播源
+      - name: 1. 清理组播源
         run: python py/zubo_cleanup.py
 
-      - name: 3. 提交并推送
+      - name: 2. 提交并推送
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
