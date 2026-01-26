@@ -71,7 +71,7 @@ def scan_ip_port(ip, port):
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_hotel_history()
-    log(f"📜 已加载酒店历史黑名单，包含 {len(history_ips)} 个 IP")
+    log(f"📜 已加载黑名单，包含 {len(history_ips)} 个 IP")
     
     if not os.path.exists(LOCAL_SOURCE):
         log(f"❌ 找不到本地源码文件: {LOCAL_SOURCE}")
@@ -81,36 +81,64 @@ def main():
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             html_content = f.read()
         
-        # --- 核心改进：精准定位 Hotel IPTV 区域 ---
-        # 寻找包含 "Hotel IPTV" 的起始位置
+        # 1. 锁定酒店区域
         hotel_start_key = "Hotel IPTV"
         if hotel_start_key in html_content:
-            # 截取从 "Hotel IPTV" 开始到页面结束的内容
             hotel_raw_area = html_content.split(hotel_start_key)[1]
-            
-            # 进一步精细化：如果后面还有其他 section（如组播源），则在那之前截断
-            # 假设下一个区域也带 group-section 类名
             hotel_clean_area = hotel_raw_area.split('class="group-section"')[0]
-            log("🎯 已成功锁定 Hotel IPTV 专属区域")
+            log("🎯 已锁定 Hotel IPTV 专属加密区域")
         else:
-            log("⚠️ 未在源码中定位到 'Hotel IPTV' 标记，切换到全局兜底模式")
+            log("⚠️ 未定位到标签，使用全局扫描")
             hotel_clean_area = html_content
 
-        # 从锁定区域中提取 IP
-        # 匹配标准 IP 格式
-        found_ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", hotel_clean_area)
+        # 2. 提取并解码 Base64 格式的 IP
+        # 寻找类似 "MTIxLjIzMy4yNDkuOTk=" 格式的 Base64 字符串
+        # 这里的正则匹配 16 位以上的 Base64 特征字符
+        b64_matches = re.findall(r'[A-Za-z0-9+/]{16,}={0,2}', hotel_clean_area)
         
-        # 去重并过滤内网 IP
-        public_ips = []
-        seen = set()
-        for ip in found_ips:
-            if ip not in seen and not ip.startswith(("127.", "192.", "10.", "172.")):
-                public_ips.append(ip)
-                seen.add(ip)
+        decoded_ips = []
+        for item in b64_matches:
+            try:
+                # 尝试解码
+                decoded_str = base64.b64decode(item).decode('utf-8')
+                # 验证解码后是否符合 IP 格式
+                if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", decoded_str):
+                    if not decoded_str.startswith(("127.", "192.", "10.")):
+                        decoded_ips.append(decoded_str)
+            except:
+                continue
+        
+        # 如果 Base64 解码没抓到，尝试直接抓明文（兜底逻辑）
+        if not decoded_ips:
+            decoded_ips = re.findall(r"\b(?:\d{1,3}\.){3}\d{1,3}\b", hotel_clean_area)
+
+        # 去重
+        public_ips = list(dict.fromkeys(decoded_ips))
         
         if not public_ips:
-            log("❌ 在酒店源区域内未发现任何有效 IP。")
+            log("❌ 区域内未发现任何 IP（加密或明文均无）。")
             return
+
+        log(f"🔎 识别到 {len(public_ips)} 个酒店 IP")
+    except Exception as e:
+        log(f"❌ 解析源码失败: {e}"); return
+
+    # 3. 选取前 6 个新 IP
+    new_ips_to_scan = []
+    for ip in public_ips: 
+        if ip in history_ips:
+            continue
+        new_ips_to_scan.append(ip)
+        if len(new_ips_to_scan) >= MAX_IP_COUNT:
+            break
+
+    if not new_ips_to_scan:
+        log("✅ 所有候选 IP 已在黑名单。")
+        return
+
+    log(f"🚀 开始顺序探测: {new_ips_to_scan}")
+
+    # ... 后面保持 scan_ip_port 逻辑即可 ...
 
         log(f"🔎 酒店区域识别到 {len(public_ips)} 个独立 IP")
     except Exception as e:
