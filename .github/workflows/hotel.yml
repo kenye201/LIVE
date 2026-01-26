@@ -30,15 +30,18 @@ jobs:
       - name: 2. 合并 M3U 文件
         run: |
           python py/merge_m3u.py
-
       - name: 提交并推送更改
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
+          # 1. 先拉取远程更改，防止冲突
+          git pull origin main --rebase
           
-          # 只有在目录存在且有文件时才添加，避免报错
-          if [ -d "hotel" ]; then git add hotel/*.m3u || true; fi
+          # 2. 添加文件
+          git add hotel/*.m3u
+          git add hotel/hotel_history.txt # 确保黑名单被保存
           
-          git commit -m "酒店源自动更新: $(date '+%Y-%m-%d %H:%M:%S')" || echo "没有检测到变化"
+          # 3. 提交并推送
+          git commit -m "酒店源自动更新: $(date '+%Y-%m-%d %H:%M:%S')" || echo "无变动"
           git push origin main
