@@ -1,4 +1,4 @@
-name: 每日仓库例行维护 (清理失效源)
+name: hotel(清理失效源)
 
 on:
   schedule:
