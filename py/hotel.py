@@ -12,58 +12,31 @@ from datetime import datetime
 # ======================
 LOCAL_SOURCE = "data/shushu_home.html"
 OUTPUT_DIR = "hotel"
+# 确保黑名单路径正确
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 6 
-TIMEOUT = 20        # 进一步增加超时时间
+MAX_IP_COUNT = 15   # 增加扫描深度
+TIMEOUT = 25        # 增加超时容忍度
 
-# 重新排序端口：根据你的反馈，把 9999 提到第一位，其他高频紧随其后
-PRIMARY_PORTS = [9999, 8000, 8080, 9901, 8082, 8888, 9888, 8090, 8081, 8181, 8899, 8001, 85, 808, 50001, 20443]
+# 重新编排端口：根据实测，9999, 9901, 8888, 85 是目前酒店源最高频端口
+PRIMARY_PORTS = [9999, 8000, 8080, 9901, 8082, 8888, 85, 9888, 8090, 8081, 8181, 8899, 8001, 808, 50001, 20443]
 
 def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
     sys.stdout.flush()
 
-def scan_ip_port(ip, port):
-    """
-    精准匹配你测试成功的格式：
-    http://iptv.cqshushu.com/?s=175.11.74.249:9999&t=hotel&channels=1&format=m3u
-    """
-    # 使用 f-string 严格构造 URL，不让 requests 自动编码冒号
-    url = f"https://iptv.cqshushu.com/index.php?s={ip}:{port}&t=hotel&channels=1&download=m3u"
-    
-    sys.stdout.write(f"  --> 测试 [{port}] ... ")
-    sys.stdout.flush()
-
-    try:
-        # 端口间稍微停顿，模拟人工点击
-        time.sleep(random.uniform(2.0, 4.0))
-        
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-            "Referer": "https://iptv.cqshushu.com/",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-            "Connection": "keep-alive"
-        }
-        
-        # 显式禁止重定向，看看是不是被防火墙拦截了
-        res = requests.get(url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
-        
-        if res.status_code == 200 and "#EXTINF" in res.text:
-            sys.stdout.write("【✅ 匹配成功！】\n")
-            return res.text
-        elif "请稍候" in res.text or res.status_code == 503:
-            sys.stdout.write("⚠️ 遇盾/限频 ")
-        else:
-            sys.stdout.write("✕ ")
-    except Exception as e:
-        sys.stdout.write("⏰ 超时 ")
-    
-    sys.stdout.flush()
-    return None
-
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
     
+    # 1. 加载黑名单 (hotel_history.txt)
+    history_ips = set()
+    if os.path.exists(HISTORY_FILE):
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                if ":" in line:
+                    history_ips.add(line.split(':')[0].strip())
+    log(f"📜 已加载黑名单，包含 {len(history_ips)} 个已成功 IP，将自动跳过。")
+
     if not os.path.exists(LOCAL_SOURCE):
         log("❌ 源码文件缺失"); return
 
@@ -71,45 +44,67 @@ def main():
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # 提取 Base64 IP
+        # 2. 提取 IP
         b64_list = re.findall(r"gotoIP\('([^']+)',\s*'hotel'\)", content)
         found_ips = []
         for b in b64_list:
             try:
                 decoded = base64.b64decode(b).decode('utf-8')
                 if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", decoded):
-                    if decoded not in found_ips:
+                    # 【核心改进】在这里进行黑名单过滤
+                    if decoded not in found_ips and decoded not in history_ips:
                         found_ips.append(decoded)
             except: continue
 
         if not found_ips:
-            log("❌ 未发现有效 IP"); return
+            log("🔎 本次扫描未发现新 IP（或全部已被黑名单过滤）"); return
 
-        log(f"✅ 提取 {len(found_ips)} 个 IP，首选端口: {PRIMARY_PORTS[0]}")
+        log(f"✅ 发现 {len(found_ips)} 个待探测新目标。")
 
-        # 探测前 10 个
-        target_ips = found_ips[:MAX_IP_COUNT]
-        for idx, ip in enumerate(target_ips, 1):
-            log(f"📡 [{idx}/{len(target_ips)}] 深度扫描: {ip}")
+        # 3. 探测逻辑
+        for idx, ip in enumerate(found_ips[:MAX_IP_COUNT], 1):
+            log(f"📡 [{idx}] 正在探测新 IP: {ip}")
+            success = False
             
             for port in PRIMARY_PORTS:
-                m3u_data = scan_ip_port(ip, port)
+                # 严格按照你测试成功的 URL 格式
+                url = f"http://iptv.cqshushu.com/index.php?s={ip}:{port}&t=hotel&channels=1&download=m3u"
                 
-                if m3u_data:
-                    # 自动获取运营商名称
-                    m = re.search(r'group-title="([^"]+)"', m3u_data)
-                    tag = m.group(1).split()[-1] if m else "Hotel"
-                    tag = re.sub(r'[\\/:*?"<>|]', '', tag)
+                sys.stdout.write(f"  --> {port} ")
+                sys.stdout.flush()
+
+                try:
+                    # 慢速探测，防止丢包
+                    time.sleep(random.uniform(2.5, 4.5))
+                    headers = {"User-Agent": "Mozilla/5.0", "Referer": "http://iptv.cqshushu.com/"}
+                    res = requests.get(url, headers=headers, timeout=TIMEOUT)
                     
-                    fn = f"{tag}_{ip.replace('.', '_')}_{port}.m3u"
-                    with open(os.path.join(OUTPUT_DIR, fn), "w", encoding="utf-8") as f:
-                        f.write(m3u_data)
-                    
-                    log(f"🎉 抓取成功: {fn}")
-                    break 
+                    if res.status_code == 200 and "#EXTINF" in res.text:
+                        sys.stdout.write("【✅】\n")
+                        # 提取信息并命名
+                        m = re.search(r'group-title="([^"]+)"', res.text)
+                        tag = m.group(1).split()[-1] if m else "Hotel"
+                        tag = re.sub(r'[\\/:*?"<>|]', '', tag)
+                        
+                        fn = f"{tag}_{ip.replace('.', '_')}_{port}.m3u"
+                        with open(os.path.join(OUTPUT_DIR, fn), "w", encoding="utf-8") as f:
+                            f.write(res.text)
+                        
+                        # 【核心改进】成功后写入黑名单文件
+                        with open(HISTORY_FILE, "a", encoding="utf-8") as hf:
+                            hf.write(f"{ip}:{port}\n")
+                        
+                        log(f"🎉 记录黑名单并保存: {fn}")
+                        success = True
+                        break
+                    else:
+                        sys.stdout.write("✕ ")
+                except:
+                    sys.stdout.write("⏰ ")
+                sys.stdout.flush()
             
-            # 每个 IP 探测完大休息
-            time.sleep(8)
+            if not success: print(f"\n❌ IP {ip} 扫描完所有字典端口无果")
+            time.sleep(6) # IP 间休息
 
     except Exception as e:
         log(f"❌ 运行异常: {e}")
