@@ -26,16 +26,13 @@ jobs:
         run: pip install requests
 
       - name: 执行失效清理 (酒店 & 组播)
-        run: 
-          python py/zubo_cleanup.py
+        run:  python py/zubo_cleanup.py
 
       - name: 提交更改
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          git add hotel/*.m3u zubo/*.m3u
-          git add hotel/hotel_history.txt || true
           
           if git diff --staged --quiet; then
             echo "没有发现失效源。"
