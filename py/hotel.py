@@ -15,8 +15,9 @@ DEBUG_OUTPUT = "data/extracted_hotel_ips.txt"
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
 MAX_IP_COUNT = 6
-TIMEOUT = 15
+TIMEOUT = 12
 
+# 酒店高频端口
 PRIMARY_PORTS = [8000, 8080, 9901, 8082, 8888, 9001, 8001, 8090, 9999, 888, 9003, 8081, 50001]
 
 def log(msg):
@@ -27,65 +28,66 @@ def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     if not os.path.exists(LOCAL_SOURCE):
-        log(f"❌ 找不到源码: {LOCAL_SOURCE}"); return
+        log("❌ 找不到源码文件"); return
 
     try:
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             content = f.read()
+
+        # 1. 精准提取：寻找 gotoIP 函数里的 Base64 字符串
+        # 对应源码：onclick="gotoIP('MTc1LjExLjczLjIzMA==', 'hotel')"
+        b64_list = re.findall(r"gotoIP\('([^']+)',\s*'hotel'\)", content)
         
-        # 1. 定位酒店区域
-        hotel_content = content.split("Hotel IPTV")[1] if "Hotel IPTV" in content else content
-        
-        # 2. 【剥洋葱提取】
-        # 提取 gotoIP('XXX', 'hotel') 里的加密字符串
         found_ips = []
-        b64_matches = re.findall(r"gotoIP\('([^']+)',\s*'hotel'\)", hotel_content)
-        
-        log(f"🔎 找到 {len(b64_matches)} 个加密串，正在解码...")
-        
-        for b in b64_matches:
+        for b in b64_list:
             try:
-                # 解码 Base64
                 decoded = base64.b64decode(b).decode('utf-8')
-                # 只要解码出来长得像 IP 就要
+                # 验证是否为合法 IP 格式
                 if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", decoded):
-                    found_ips.append(decoded)
+                    if decoded not in found_ips:
+                        found_ips.append(decoded)
             except: continue
 
-        # 3. 兜底提取：抓取那些带空格的明文 IP
-        # 比如 1.197.252.109 可能中间混了空格
-        text_ips = re.findall(r"(?:\d{1,3}\s*\.\s*){3}\d{1,3}", hotel_content)
-        for tip in text_ips:
-            clean_ip = tip.replace(" ", "").strip()
-            if clean_ip not in found_ips:
-                found_ips.append(clean_ip)
-
-        # 4. 存证
+        # 2. 存证（不管成没成功都写文件）
         with open(DEBUG_OUTPUT, "w", encoding="utf-8") as df:
-            df.write("\n".join(found_ips) if found_ips else "EMPTY: No IPs extracted")
+            if found_ips:
+                df.write("\n".join(found_ips))
+                log(f"✅ 提取成功！共发现 {len(found_ips)} 个酒店 IP")
+            else:
+                df.write("FAILED: No IPs found in gotoIP functions.")
+                log("❌ 提取失败：未发现 gotoIP 函数特征")
 
-        if not found_ips:
-            log("❌ 依然没抓到，可能网页结构变了"); return
+        if not found_ips: return
 
-        log(f"✅ 成功抓取到 {len(found_ips)} 个 IP")
-
-        # 5. 探测逻辑 (只取前 6)
+        # 3. 选取前 6 个进行扫描
         target_ips = found_ips[:MAX_IP_COUNT]
+        log(f"🚀 开始扫描前 {len(target_ips)} 个目标...")
+
         for ip in target_ips:
-            log(f"📡 探测: {ip}")
+            log(f"\n📡 正在探测 IP: {ip}")
+            success = False
             for port in PRIMARY_PORTS:
+                sys.stdout.write(f"  ➜ {port} ")
+                sys.stdout.flush()
+                
                 url = f"https://iptv.cqshushu.com/index.php?s={ip}:{port}&t=hotel&channels=1&download=m3u"
                 try:
+                    time.sleep(random.uniform(0.5, 1.0))
                     res = requests.get(url, timeout=TIMEOUT)
-                    if "#EXTINF" in res.text:
-                        log(f"  ➜ {port} 【✅】")
-                        with open(os.path.join(OUTPUT_DIR, f"{ip.replace('.','_')}_{port}.m3u"), "w") as m3u:
+                    if res.status_code == 200 and "#EXTINF" in res.text:
+                        sys.stdout.write("【✅】\n")
+                        # 命名并保存
+                        with open(os.path.join(OUTPUT_DIR, f"Hotel_{ip.replace('.','_')}_{port}.m3u"), "w", encoding="utf-8") as m3u:
                             m3u.write(res.text)
-                        break
-                except: continue
-                
+                        success = True; break
+                except: pass
+                sys.stdout.write("✕ ")
+                sys.stdout.flush()
+            
+            if not success: print(f"\n⚠️ {ip} 无响应")
+
     except Exception as e:
-        log(f"❌ 崩溃: {e}")
+        log(f"❌ 程序崩溃: {e}")
 
 if __name__ == "__main__":
     main()
