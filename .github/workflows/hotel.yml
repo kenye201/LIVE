@@ -38,16 +38,16 @@ jobs:
         run: |
           python py/merge_m3u.py
 
-      - name: 4. 提交并推送更改
+      - name: 提交并推送更改
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 尝试添加所有相关变动
+          # 确保 data 目录下的存证文件被添加
           git add data/extracted_hotel_ips.txt
-          # 只有当目录存在且不为空时才添加
-          [ -d "hotel" ] && git add hotel/*.m3u || echo "No m3u files"
-          [ -f "hotel/hotel_history.txt" ] && git add hotel/hotel_history.txt || echo "No history file"
           
-          git commit -m "自动更新: $(date '+%Y-%m-%d %H:%M:%S')" || echo "无内容变更"
+          # 只有在目录存在且有文件时才添加，避免报错
+          if [ -d "hotel" ]; then git add hotel/*.m3u || true; fi
+          
+          git commit -m "酒店源自动更新: $(date '+%Y-%m-%d %H:%M:%S')" || echo "没有检测到变化"
           git push origin main
