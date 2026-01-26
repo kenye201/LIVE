@@ -1,4 +1,4 @@
-name: 自动更新直播源
+name: 酒店源自动抓取与整合
 
 on:
   schedule:
