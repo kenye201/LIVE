@@ -1,123 +1,58 @@
-import requests
-import re
-import os
-import time
-import random
-import sys
-from datetime import datetime
+name: 自动更新直播源
 
-# ======================
-# 配置区
-# ======================
-LOCAL_SOURCE = "data/shushu_home.html"
-DEBUG_OUTPUT = "data/extracted_hotel_ips.txt"  # 强制生成的结果预览文件
-OUTPUT_DIR = "hotel"
-HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
-MAX_IP_COUNT = 6
-TIMEOUT = 15
+on:
+  schedule:
+    - cron: '0 22 * * *' # 每天凌晨 6 点(北京时间)运行
+  workflow_dispatch:      # 允许手动运行
 
-PRIMARY_PORTS = [8000, 8080, 9901, 8082, 8888, 9001, 8001, 8090, 9999, 888, 9003, 8081, 50001]
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-def log(msg):
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
-    sys.stdout.flush()
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
 
-def scan_ip_port(ip, port):
-    url = f"https://iptv.cqshushu.com/index.php?s={ip}:{port}&t=hotel&channels=1&download=m3u"
-    sys.stdout.write(f"  --> 尝试 [{port}] ... ")
-    sys.stdout.flush()
-    try:
-        time.sleep(random.uniform(1.0, 1.5))
-        res = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=TIMEOUT)
-        if res.status_code == 200 and "#EXTINF" in res.text:
-            sys.stdout.write("【✅ 成功】\n")
-            return res.text
-    except: pass
-    sys.stdout.write("✕ ")
-    return None
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    os.makedirs(os.path.dirname(DEBUG_OUTPUT), exist_ok=True)
-    
-    history_ips = set()
-    if os.path.exists(HISTORY_FILE):
-        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-            for line in f:
-                if ":" in line: history_ips.add(line.split(':')[0].strip())
+      - name: 安装依赖
+        run: |
+          pip install requests
 
-    if not os.path.exists(LOCAL_SOURCE):
-        log(f"❌ 找不到源码: {LOCAL_SOURCE}")
-        return
+      - name: 1. 获取最新源码
+        # 这里假设你原本就有同步 shushu_home.html 的逻辑
+        # 如果没有，请确保该文件已存在于 data/ 目录下
+        run: |
+          echo "开始同步月球宿主源码..."
+          # 如果你是通过脚本下载的，请在这里运行该脚本，例如:
+          # python py/get_source.py 
 
-    try:
-        with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
-            content = f.read()
-        
-        # 1. 强制切分区域
-        hotel_content = content
-        if "Hotel IPTV" in content:
-            hotel_content = content.split("Hotel IPTV")[1]
-            log("🎯 已定位到酒店源区域")
-        else:
-            log("⚠️ 未定位到 Hotel IPTV 关键词，将扫描全文")
+      - name: 2. 执行酒店源暴力提取与探测
+        run: |
+          python py/hotel.py
 
-        # 2. 暴力提取所有符合 IP 格式的字符串
-        # 无论它是在 HTML 标签里、JS 函数里、还是带空格的文本里
-        raw_ips = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", hotel_content)
-        
-        # 去重并过滤局域网
-        public_ips = []
-        seen = set()
-        for ip in raw_ips:
-            if ip not in seen and not ip.startswith(("127.", "192.", "10.", "172.")):
-                public_ips.append(ip)
-                seen.add(ip)
+      - name: 3. 合并 M3U 文件
+        run: |
+          python py/merge_m3u.py
 
-        # 3. 【新功能】无论结果如何，强制生成一个预览文件供你检查
-        with open(DEBUG_OUTPUT, "w", encoding="utf-8") as df:
-            if public_ips:
-                df.write("\n".join(public_ips))
-                log(f"📝 已将提取到的 {len(public_ips)} 个 IP 写入 {DEBUG_OUTPUT}")
-            else:
-                df.write("FAILED: No IP strings found in the targeted section.")
-                log(f"📝 未找到 IP，已在 {DEBUG_OUTPUT} 中记录失败状态")
-
-        if not public_ips:
-            return
-
-        # 4. 提取前 6 个新 IP 进行探测
-        target_ips = [ip for ip in public_ips if ip not in history_ips][:MAX_IP_COUNT]
-        log(f"📊 准备探测 {len(target_ips)} 个新目标")
-
-        for ip in target_ips:
-            log(f"🌟 正在探测: {ip}")
-            success = False
-            for port in PRIMARY_PORTS:
-                content_m3u = scan_ip_port(ip, port)
-                if content_m3u:
-                    m = re.search(r'group-title="([^"]+)"', content_m3u)
-                    provider = m.group(1).split()[-1] if m else "酒店源"
-                    provider = re.sub(r'[\\/:*?"<>|]', '', provider)
-                    
-                    filename = f"{provider}-{ip.replace('.', '_')}-{port}.m3u"
-                    with open(os.path.join(OUTPUT_DIR, filename), "w", encoding="utf-8") as f:
-                        f.write(content_m3u)
-                    
-                    with open(HISTORY_FILE, "a", encoding="utf-8") as hf:
-                        hf.write(f"{ip}:{port}\n")
-                    
-                    log(f"🎉 保存成功: {filename}")
-                    success = True
-                    break
-            
-            if not success:
-                print("\n")
-                log(f"❌ {ip} 探测结束（无有效端口）")
-            time.sleep(2)
-
-    except Exception as e:
-        log(f"❌ 崩溃: {e}")
-
-if __name__ == "__main__":
-    main()
+      - name: 4. 提交并推送更改
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 强制同步远程仓库，防止提交冲突
+          git pull origin main --rebase
+          
+          # 添加所有变动文件
+          git add hotel/*.m3u             # 成功抓取的酒店源
+          git add hotel/hotel_history.txt  # 黑名单
+          git add data/extracted_hotel_ips.txt # 存证提取到的IP列表
+          
+          # 提交更改
+          git commit -m "自动更新: $(date '+%Y-%m-%d %H:%M:%S') 包含探测及存证" || echo "无内容变更，跳过提交"
+          
+          # 推送
+          git push origin main
