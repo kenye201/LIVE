@@ -1,0 +1,49 @@
+name: 每日直播源维护清理
+
+on:
+  schedule:
+    # 每天凌晨 4:00 运行 (北京时间 12:00)
+    - cron: '0 4 * * *'
+  workflow_dispatch: # 支持手动点击运行
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 执行失效清理
+        run: python py/hotelqingli.py
+
+      - name: 重新合并频道
+        run: python py/merge_m3u.py
+
+      - name: 提交清理后的仓库
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add hotel/*.m3u
+          git add hotel/hotel_history.txt || true
+          
+          if git diff --staged --quiet; then
+            echo "没有失效源需要清理。"
+          else
+            git commit -m "🧹 每日例行清理失效源: $(date '+%Y-%m-%d')"
+            git pull origin main --rebase
+            git push origin main
+          fi
