@@ -54,17 +54,27 @@ def get_fofa_ports(ip):
         return sorted([int(p) for p in ports if int(p) not in {22, 23, 443, 80, 53, 3306, 3389}])
     except: return []
 
+import sys # 必须导入
+
 def scan_ip_port(ip, port):
-    # 使用你测试成功的 index.php 接口
+    # 模拟“直播”试错过程
+    sys.stdout.write(f"  --> 正在尝试端口 [{port}] ... ")
+    sys.stdout.flush() 
+    
     url = f"https://iptv.cqshushu.com/index.php?s={ip}:{port}&t=multicast&channels=1&download=m3u"
     try:
-        # GitHub Actions 访问这个链接如果成功，就不需要像首页那样过验证
         res = requests.get(url, headers=get_headers(), timeout=TIMEOUT)
         if res.status_code == 200 and "#EXTINF" in res.text:
+            sys.stdout.write("【✅ 成功】\n")
+            sys.stdout.flush()
             return res.text
-    except: pass
+        else:
+            sys.stdout.write("【❌ 无效】\n")
+    except Exception as e:
+        sys.stdout.write("【⏰ 超时】\n")
+    
+    sys.stdout.flush()
     return None
-
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     history_ips = manage_history()
