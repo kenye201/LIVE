@@ -22,19 +22,12 @@ jobs:
         run: |
           pip install requests
 
-      - name: 1. 获取最新源码
-        # 这里假设你原本就有同步 shushu_home.html 的逻辑
-        # 如果没有，请确保该文件已存在于 data/ 目录下
-        run: |
-          echo "开始同步月球宿主源码..."
-          # 如果你是通过脚本下载的，请在这里运行该脚本，例如:
-          # python py/get_source.py 
 
-      - name: 2. 执行酒店源暴力提取与探测
+      - name: 1. 执行酒店源暴力提取与探测
         run: |
           python py/hotel.py
 
-      - name: 3. 合并 M3U 文件
+      - name: 2. 合并 M3U 文件
         run: |
           python py/merge_m3u.py
 
@@ -43,8 +36,6 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 确保 data 目录下的存证文件被添加
-          git add data/extracted_hotel_ips.txt
           
           # 只有在目录存在且有文件时才添加，避免报错
           if [ -d "hotel" ]; then git add hotel/*.m3u || true; fi
