@@ -11,33 +11,30 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # 赋予提交文件的权限
-
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
 
-      - name: 设置 Python 环境
+      - name: 设置 Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: 安装依赖
+      - name: 安装环境依赖
         run: |
-          pip install requests
+          python -m pip install --upgrade pip
+          pip install playwright requests  # 安装必要的库
+          playwright install chromium --with-deps # 安装浏览器内核及系统底层依赖
 
-      - name: 执行下载脚本
+      - name: 执行抓取脚本
         run: |
-          python py/zubo.py  # 注意：这里改成你保存的 python 文件名
+          # 确保路径正确，如果你的脚本在 py 文件夹下
+          python py/zubo.py 
 
-      - name: 检查文件是否生成
+      - name: 提交结果
         run: |
-          ls -R web_pages/
-
-      - name: 提交并推送更改
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add web_pages/*.html
-          # 只有在有新文件时才提交，防止报错
-          git diff --quiet && git diff --staged --quiet || git commit -m "自动更新: 抓取首页内容 $(date +'%Y-%m-%d %H:%M')"
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "自动更新数据" || exit 0
           git push
