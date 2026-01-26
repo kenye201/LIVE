@@ -10,12 +10,12 @@ from datetime import datetime
 # 配置区
 # ======================
 LOCAL_SOURCE = "data/shushu_home.html"
+DEBUG_OUTPUT = "data/extracted_hotel_ips.txt"  # 强制生成的结果预览文件
 OUTPUT_DIR = "hotel"
 HISTORY_FILE = os.path.join(OUTPUT_DIR, "hotel_history.txt")
 MAX_IP_COUNT = 6
 TIMEOUT = 15
 
-# 酒店源常用端口
 PRIMARY_PORTS = [8000, 8080, 9901, 8082, 8888, 9001, 8001, 8090, 9999, 888, 9003, 8081, 50001]
 
 def log(msg):
@@ -32,15 +32,14 @@ def scan_ip_port(ip, port):
         if res.status_code == 200 and "#EXTINF" in res.text:
             sys.stdout.write("【✅ 成功】\n")
             return res.text
-    except:
-        pass
+    except: pass
     sys.stdout.write("✕ ")
     return None
 
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(os.path.dirname(DEBUG_OUTPUT), exist_ok=True)
     
-    # 1. 加载历史记录
     history_ips = set()
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
@@ -48,22 +47,26 @@ def main():
                 if ":" in line: history_ips.add(line.split(':')[0].strip())
 
     if not os.path.exists(LOCAL_SOURCE):
-        log("❌ 找不到源码"); return
+        log(f"❌ 找不到源码: {LOCAL_SOURCE}")
+        return
 
     try:
         with open(LOCAL_SOURCE, "r", encoding="utf-8") as f:
             content = f.read()
         
-        # 2. 【粉碎提取】思路：
-        # 第一步：只保留 Hotel IPTV 之后的内容
+        # 1. 强制切分区域
+        hotel_content = content
         if "Hotel IPTV" in content:
-            content = content.split("Hotel IPTV")[1]
+            hotel_content = content.split("Hotel IPTV")[1]
+            log("🎯 已定位到酒店源区域")
+        else:
+            log("⚠️ 未定位到 Hotel IPTV 关键词，将扫描全文")
 
-        # 第二步：暴力匹配所有看起来像 IP 的字符串
-        # 无论它是在 onclick 里、td 里、还是躲在空格里
-        raw_ips = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", content)
+        # 2. 暴力提取所有符合 IP 格式的字符串
+        # 无论它是在 HTML 标签里、JS 函数里、还是带空格的文本里
+        raw_ips = re.findall(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", hotel_content)
         
-        # 第三步：去重并过滤掉局域网 IP
+        # 去重并过滤局域网
         public_ips = []
         seen = set()
         for ip in raw_ips:
@@ -71,21 +74,28 @@ def main():
                 public_ips.append(ip)
                 seen.add(ip)
 
+        # 3. 【新功能】无论结果如何，强制生成一个预览文件供你检查
+        with open(DEBUG_OUTPUT, "w", encoding="utf-8") as df:
+            if public_ips:
+                df.write("\n".join(public_ips))
+                log(f"📝 已将提取到的 {len(public_ips)} 个 IP 写入 {DEBUG_OUTPUT}")
+            else:
+                df.write("FAILED: No IP strings found in the targeted section.")
+                log(f"📝 未找到 IP，已在 {DEBUG_OUTPUT} 中记录失败状态")
+
         if not public_ips:
-            log("❌ 依然没有抓到 IP，请检查本地文件内容。")
             return
 
-        # 3. 选取前 6 个
+        # 4. 提取前 6 个新 IP 进行探测
         target_ips = [ip for ip in public_ips if ip not in history_ips][:MAX_IP_COUNT]
-        log(f"📊 粉碎提取完成，发现 {len(public_ips)} 个 IP，准备探测前 {len(target_ips)} 个新目标")
+        log(f"📊 准备探测 {len(target_ips)} 个新目标")
 
         for ip in target_ips:
-            log(f"🌟 探测 IP: {ip}")
+            log(f"🌟 正在探测: {ip}")
             success = False
             for port in PRIMARY_PORTS:
                 content_m3u = scan_ip_port(ip, port)
                 if content_m3u:
-                    # 命名
                     m = re.search(r'group-title="([^"]+)"', content_m3u)
                     provider = m.group(1).split()[-1] if m else "酒店源"
                     provider = re.sub(r'[\\/:*?"<>|]', '', provider)
@@ -97,17 +107,17 @@ def main():
                     with open(HISTORY_FILE, "a", encoding="utf-8") as hf:
                         hf.write(f"{ip}:{port}\n")
                     
-                    log(f"🎉 成功保存: {filename}")
+                    log(f"🎉 保存成功: {filename}")
                     success = True
                     break
             
             if not success:
                 print("\n")
-                log(f"❌ IP {ip} 失败")
+                log(f"❌ {ip} 探测结束（无有效端口）")
             time.sleep(2)
 
     except Exception as e:
-        log(f"❌ 运行崩溃: {e}")
+        log(f"❌ 崩溃: {e}")
 
 if __name__ == "__main__":
     main()
