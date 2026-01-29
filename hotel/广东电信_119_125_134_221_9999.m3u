@@ -1,0 +1,153 @@
+#EXTM3U x-tvg-url="https://fy.188766.xyz/e.xml" tvg-shift="0"
+#EXTINF:-1 tvg-id="翡翠台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",翡翠台
+http://119.125.134.221:9999/tsfile/live/1007_1.m3u8
+#EXTINF:-1 tvg-id="CCTV16" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV16
+http://119.125.134.221:9999/tsfile/live/1008_1.m3u8
+#EXTINF:-1 tvg-id="明珠台" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",明珠台
+http://119.125.134.221:9999/tsfile/live/1009_1.m3u8
+#EXTINF:-1 tvg-id="广东卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东卫视
+http://119.125.134.221:9999/tsfile/live/0125_1.m3u8
+#EXTINF:-1 tvg-id="广东珠江" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东珠江
+http://119.125.134.221:9999/tsfile/live/1010_1.m3u8
+#EXTINF:-1 tvg-id="广东新闻" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东新闻
+http://119.125.134.221:9999/tsfile/live/1011_1.m3u8
+#EXTINF:-1 tvg-id="广东公共" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东公共
+http://119.125.134.221:9999/tsfile/live/1012_1.m3u8
+#EXTINF:-1 tvg-id="广东体育" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东体育
+http://119.125.134.221:9999/tsfile/live/1013_1.m3u8
+#EXTINF:-1 tvg-id="经济科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",经济科教
+http://119.125.134.221:9999/tsfile/live/1014_1.m3u8
+#EXTINF:-1 tvg-id="南方卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",南方卫视
+http://119.125.134.221:9999/tsfile/live/1015_1.m3u8
+#EXTINF:-1 tvg-id="广东影视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东影视
+http://119.125.134.221:9999/tsfile/live/1016_1.m3u8
+#EXTINF:-1 tvg-id="广东少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广东少儿
+http://119.125.134.221:9999/tsfile/live/1017_1.m3u8
+#EXTINF:-1 tvg-id="CCTV1" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV1
+http://119.125.134.221:9999/tsfile/live/0001_1.m3u8
+#EXTINF:-1 tvg-id="CCTV2" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV2
+http://119.125.134.221:9999/tsfile/live/0002_1.m3u8
+#EXTINF:-1 tvg-id="CCTV3" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV3
+http://119.125.134.221:9999/tsfile/live/0003_1.m3u8
+#EXTINF:-1 tvg-id="CCTV4" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV4
+http://119.125.134.221:9999/tsfile/live/0004_1.m3u8
+#EXTINF:-1 tvg-id="CCTV5" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV5
+http://119.125.134.221:9999/tsfile/live/0005_1.m3u8
+#EXTINF:-1 tvg-id="CCTV5+" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV5+
+http://119.125.134.221:9999/tsfile/live/0016_1.m3u8
+#EXTINF:-1 tvg-id="CCTV6" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV6
+http://119.125.134.221:9999/tsfile/live/0006_1.m3u8
+#EXTINF:-1 tvg-id="CCTV7" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV7
+http://119.125.134.221:9999/tsfile/live/0007_1.m3u8
+#EXTINF:-1 tvg-id="CCTV8" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV8
+http://119.125.134.221:9999/tsfile/live/0008_1.m3u8
+#EXTINF:-1 tvg-id="CCTV9" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV9
+http://119.125.134.221:9999/tsfile/live/0009_1.m3u8
+#EXTINF:-1 tvg-id="CCTV10" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV10
+http://119.125.134.221:9999/tsfile/live/0010_1.m3u8
+#EXTINF:-1 tvg-id="CCTV11" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV11
+http://119.125.134.221:9999/tsfile/live/0011_1.m3u8
+#EXTINF:-1 tvg-id="CCTV12" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV12
+http://119.125.134.221:9999/tsfile/live/0012_1.m3u8
+#EXTINF:-1 tvg-id="CCTV13" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV13
+http://119.125.134.221:9999/tsfile/live/0013_1.m3u8
+#EXTINF:-1 tvg-id="CCTV14" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV14
+http://119.125.134.221:9999/tsfile/live/0014_1.m3u8
+#EXTINF:-1 tvg-id="CCTV15" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CCTV15
+http://119.125.134.221:9999/tsfile/live/0015_1.m3u8
+#EXTINF:-1 tvg-id="凤凰中文" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",凤凰中文
+http://119.125.134.221:9999/tsfile/live/1019_1.m3u8
+#EXTINF:-1 tvg-id="新科动漫" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",新科动漫
+http://119.125.134.221:9999/tsfile/live/1021_1.m3u8
+#EXTINF:-1 tvg-id="怀旧剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",怀旧剧场
+http://119.125.134.221:9999/tsfile/live/1022_1.m3u8
+#EXTINF:-1 tvg-id="谍战剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",谍战剧场
+http://119.125.134.221:9999/tsfile/live/1025_1.m3u8
+#EXTINF:-1 tvg-id="相声小品" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",相声小品
+http://119.125.134.221:9999/tsfile/live/1026_1.m3u8
+#EXTINF:-1 tvg-id="CHC家庭电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CHC家庭电影
+http://119.125.134.221:9999/tsfile/live/1027_1.m3u8
+#EXTINF:-1 tvg-id="CHC动作电影" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",CHC动作电影
+http://119.125.134.221:9999/tsfile/live/1028_1.m3u8
+#EXTINF:-1 tvg-id="热播剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",热播剧场
+http://119.125.134.221:9999/tsfile/live/1029_1.m3u8
+#EXTINF:-1 tvg-id="嘉佳卡通" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",嘉佳卡通
+http://119.125.134.221:9999/tsfile/live/1030_1.m3u8
+#EXTINF:-1 tvg-id="卡酷少儿" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",卡酷少儿
+http://119.125.134.221:9999/tsfile/live/1031_1.m3u8
+#EXTINF:-1 tvg-id="澳视澳门" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",澳视澳门
+http://119.125.134.221:9999/tsfile/live/1033_1.m3u8
+#EXTINF:-1 tvg-id="少儿动画" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",少儿动画
+http://119.125.134.221:9999/tsfile/live/1034_1.m3u8
+#EXTINF:-1 tvg-id="湖南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",湖南卫视
+http://119.125.134.221:9999/tsfile/live/0128_1.m3u8
+#EXTINF:-1 tvg-id="浙江卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",浙江卫视高清
+http://119.125.134.221:9999/tsfile/live/1035_1.m3u8
+#EXTINF:-1 tvg-id="东方卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",东方卫视高清
+http://119.125.134.221:9999/tsfile/live/1037_1.m3u8
+#EXTINF:-1 tvg-id="安徽卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",安徽卫视高清
+http://119.125.134.221:9999/tsfile/live/1038_1.m3u8
+#EXTINF:-1 tvg-id="北京卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",北京卫视高清
+http://119.125.134.221:9999/tsfile/live/1039_1.m3u8
+#EXTINF:-1 tvg-id="天津卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",天津卫视高清
+http://119.125.134.221:9999/tsfile/live/1040_1.m3u8
+#EXTINF:-1 tvg-id="山东卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",山东卫视高清
+http://119.125.134.221:9999/tsfile/live/1041_1.m3u8
+#EXTINF:-1 tvg-id="江西卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",江西卫视高清
+http://119.125.134.221:9999/tsfile/live/1042_1.m3u8
+#EXTINF:-1 tvg-id="深圳卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",深圳卫视高清
+http://119.125.134.221:9999/tsfile/live/1043_1.m3u8
+#EXTINF:-1 tvg-id="湖北卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",湖北卫视高清
+http://119.125.134.221:9999/tsfile/live/0132_1.m3u8
+#EXTINF:-1 tvg-id="辽宁卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",辽宁卫视高清
+http://119.125.134.221:9999/tsfile/live/1044_1.m3u8
+#EXTINF:-1 tvg-id="黑龙江卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",黑龙江卫视高清
+http://119.125.134.221:9999/tsfile/live/1045_1.m3u8
+#EXTINF:-1 tvg-id="贵州卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",贵州卫视高清
+http://119.125.134.221:9999/tsfile/live/1046_1.m3u8
+#EXTINF:-1 tvg-id="四川卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",四川卫视高清
+http://119.125.134.221:9999/tsfile/live/1047_1.m3u8
+#EXTINF:-1 tvg-id="重庆卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",重庆卫视高清
+http://119.125.134.221:9999/tsfile/live/1048_1.m3u8
+#EXTINF:-1 tvg-id="河北卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",河北卫视高清
+http://119.125.134.221:9999/tsfile/live/1049_1.m3u8
+#EXTINF:-1 tvg-id="东南卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",东南卫视高清
+http://119.125.134.221:9999/tsfile/live/1050_1.m3u8
+#EXTINF:-1 tvg-id="吉林卫视高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",吉林卫视高清
+http://119.125.134.221:9999/tsfile/live/1051_1.m3u8
+#EXTINF:-1 tvg-id="中国教育高清" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",中国教育高清
+http://119.125.134.221:9999/tsfile/live/1052_1.m3u8
+#EXTINF:-1 tvg-id="金鹰纪实" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",金鹰纪实
+http://119.125.134.221:9999/tsfile/live/1053_1.m3u8
+#EXTINF:-1 tvg-id="cctv16奥运" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",cctv16奥运
+http://119.125.134.221:9999/tsfile/live/1054_1.m3u8
+#EXTINF:-1 tvg-id="河南卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",河南卫视
+http://119.125.134.221:9999/tsfile/live/0139_1.m3u8
+#EXTINF:-1 tvg-id="广西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",广西卫视
+http://119.125.134.221:9999/tsfile/live/0113_1.m3u8
+#EXTINF:-1 tvg-id="陕西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",陕西卫视
+http://119.125.134.221:9999/tsfile/live/0136_1.m3u8
+#EXTINF:-1 tvg-id="山西卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",山西卫视
+http://119.125.134.221:9999/tsfile/live/0118_1.m3u8
+#EXTINF:-1 tvg-id="内蒙古卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",内蒙古卫视
+http://119.125.134.221:9999/tsfile/live/0109_1.m3u8
+#EXTINF:-1 tvg-id="青海卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",青海卫视
+http://119.125.134.221:9999/tsfile/live/0140_1.m3u8
+#EXTINF:-1 tvg-id="旅游卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",旅游卫视
+http://119.125.134.221:9999/tsfile/live/0114_1.m3u8
+#EXTINF:-1 tvg-id="宁夏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",宁夏卫视
+http://119.125.134.221:9999/tsfile/live/0112_1.m3u8
+#EXTINF:-1 tvg-id="兵器科技" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",兵器科技
+http://119.125.134.221:9999/tsfile/live/0111_1.m3u8
+#EXTINF:-1 tvg-id="新疆卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",新疆卫视
+http://119.125.134.221:9999/tsfile/live/0110_1.m3u8
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",甘肃卫视
+http://119.125.134.221:9999/tsfile/live/0141_1.m3u8
+#EXTINF:-1 tvg-id="纪实科教" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",纪实科教
+http://119.125.134.221:9999/tsfile/live/0115_1.m3u8
+#EXTINF:-1 tvg-id="文物宝库" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",文物宝库
+http://119.125.134.221:9999/tsfile/live/0129_1.m3u8
+#EXTINF:-1 tvg-id="都市剧场" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",都市剧场
+http://119.125.134.221:9999/tsfile/live/1056_1.m3u8
+#EXTINF:-1 tvg-id="新视觉" tvg-logo="https://gcore.jsdelivr.net/gh/taksssss/tv/icon/.png" group-title="广东省梅州市五华县酒店 广东电信",新视觉
+http://119.125.134.221:9999/tsfile/live/1057_1.m3u8
